@@ -13,15 +13,16 @@ struct PhotoGridView: View {
     let columns = [
         GridItem(.adaptive(minimum: 100), spacing: 8)
     ]
+    
     var body: some View {
         Group {
             switch viewModel.viewState {
             case .loading:
                 ProgressView()
             case .ready(let photos):
-                content(with: photos)
+                photoGrid(with: photos)
             case .empty:
-                Text("There is no photo..")
+                emptyView
             case .error:
                 Text("Oppss!!")
             }
@@ -32,37 +33,28 @@ struct PhotoGridView: View {
     }
     
     @ViewBuilder
-    private func content(with photos: [Photo]) -> some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 8) {
-                ForEach(photos) { photo in
-                    NetworkImageView(
-                        url: URL(string: photo.downloadUrl),
-                        content: { image in
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        },
-                        placeholder: {
-                            photoPlaceholder
-                        })
-                    .frame(minWidth: 100, minHeight: 100)
-                    .clipped()
-                    .cornerRadius(8)
-                }
-            }
-            .padding(8)
+    private var emptyView: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "photo.on.rectangle.angled")
+                .font(.system(size: 30))
+                .foregroundStyle(.gray)
+            Text("No photos available")
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
         }
     }
     
     @ViewBuilder
-    private var photoPlaceholder: some View {
-        RoundedRectangle(cornerRadius: 8)
-            .fill(Color.gray.opacity(0.3))
-            .overlay(
-                Image(systemName: "photo")
-                    .foregroundColor(.gray)
-            )
+    private func photoGrid(with photos: [Photo]) -> some View {
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 8) {
+                ForEach(photos) { photo in
+                    PhotoGridItemView(photo: photo)
+                }
+            }
+            .padding(8)
+        }
     }
 }
 

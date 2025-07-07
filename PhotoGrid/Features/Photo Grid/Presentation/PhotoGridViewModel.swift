@@ -21,9 +21,16 @@ final class PhotoGridViewModel: ObservableObject {
     func fetchPhotoGrid() async {
         do {
             let photos = try await fetchPhotoGridUseCase.fetchPhotoGrid()
+            
+            guard !photos.isEmpty else {
+                viewState = .empty
+                return
+            }
+            
             viewState = .ready(photos: photos)
         } catch {
-           print("\(error)")
+            //TODO: Handle Error
+            viewState = .error
         }
     }
 }

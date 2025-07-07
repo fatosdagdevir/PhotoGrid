@@ -4,11 +4,11 @@ struct FavouritesView: View {
     @ObservedObject var viewModel: FavouritesViewModel
     
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 16) {
             Image(systemName: "heart.fill")
                 .imageScale(.large)
                 .foregroundStyle(.red)
-                .font(.system(size: 40))
+                .font(.system(size: 30))
             
             Text("Your favourite photos will appear here")
                 .font(.body)
@@ -21,9 +21,7 @@ struct FavouritesView: View {
 }
 
 #Preview {
-    NavigationStack {
-        FavouritesView(
-            viewModel: .init(navigator: Navigator())
-        )
-    }
+    FavouritesView(
+        viewModel: .init(navigator: Navigator())
+    )
 }

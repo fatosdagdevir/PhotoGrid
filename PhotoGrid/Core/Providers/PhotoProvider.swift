@@ -22,9 +22,11 @@ final class PhotoProvider: PhotoProviding {
 // MARK: - Photo Grid
 private struct PhotoGridEndpoint: EndpointProtocol {
     let base = AppConstants.API.baseURL
-    let path = "/list?limit=100"
+    let path = "/list"
 
-    var queryParameters: [String : String]?
+    var queryParameters: [String : String]? {
+        ["limit": "100"]
+    }
 }
 
 private struct PhotoGridRequest: RequestProtocol {

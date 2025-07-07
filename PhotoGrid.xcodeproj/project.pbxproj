@@ -30,6 +30,7 @@
 		BBDE9D062E1C5AEB00FABEC1 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D052E1C5AEB00FABEC1 /* NetworkImageView.swift */; };
 		BBDE9D0B2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D0A2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift */; };
 		BBDE9D0D2E1C604700FABEC1 /* PreviewProvider+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D0C2E1C604700FABEC1 /* PreviewProvider+Photo.swift */; };
+		BBDE9D0F2E1C6C5B00FABEC1 /* PhotoGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D0E2E1C6C5B00FABEC1 /* PhotoGridItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BBDE9D052E1C5AEB00FABEC1 /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
 		BBDE9D0A2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+PhotoGridViewModel.swift"; sourceTree = "<group>"; };
 		BBDE9D0C2E1C604700FABEC1 /* PreviewProvider+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Photo.swift"; sourceTree = "<group>"; };
+		BBDE9D0E2E1C6C5B00FABEC1 /* PhotoGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,8 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				BBDE9CDF2E1C12EB00FABEC1 /* PhotoGridCoordinator.swift */,
-				BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */,
 				BBDE9CE32E1C132C00FABEC1 /* PhotoGridViewModel.swift */,
+				BBDE9D102E1C6FB800FABEC1 /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -291,6 +293,15 @@
 				BBDE9D0C2E1C604700FABEC1 /* PreviewProvider+Photo.swift */,
 			);
 			path = "Preview Helpers";
+			sourceTree = "<group>";
+		};
+		BBDE9D102E1C6FB800FABEC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */,
+				BBDE9D0E2E1C6C5B00FABEC1 /* PhotoGridItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +453,7 @@
 				BBDE9CE92E1C16F800FABEC1 /* FavouritesCoordinator.swift in Sources */,
 				BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */,
 				BBDE9D0B2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift in Sources */,
+				BBDE9D0F2E1C6C5B00FABEC1 /* PhotoGridItemView.swift in Sources */,
 				BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */,
 				BBDE9D062E1C5AEB00FABEC1 /* NetworkImageView.swift in Sources */,
 				BBDE9CFB2E1C3CC900FABEC1 /* AppConstants.swift in Sources */,
