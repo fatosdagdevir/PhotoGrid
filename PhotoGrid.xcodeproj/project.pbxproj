@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		BBDE9CAA2E1C11A200FABEC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBDE9C942E1C119F00FABEC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBDE9C9B2E1C119F00FABEC1;
+			remoteInfo = PhotoGrid;
+		};
+		BBDE9CB42E1C11A200FABEC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBDE9C942E1C119F00FABEC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBDE9C9B2E1C119F00FABEC1;
+			remoteInfo = PhotoGrid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBDE9C9C2E1C119F00FABEC1 /* PhotoGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBDE9CA92E1C11A200FABEC1 /* PhotoGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBDE9CB32E1C11A200FABEC1 /* PhotoGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BBDE9C9E2E1C119F00FABEC1 /* PhotoGrid */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PhotoGrid;
+			sourceTree = "<group>";
+		};
+		BBDE9CAC2E1C11A200FABEC1 /* PhotoGridTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PhotoGridTests;
+			sourceTree = "<group>";
+		};
+		BBDE9CB62E1C11A200FABEC1 /* PhotoGridUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PhotoGridUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBDE9C992E1C119F00FABEC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBDE9CA62E1C11A200FABEC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBDE9CB02E1C11A200FABEC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBDE9C932E1C119F00FABEC1 = {
+			isa = PBXGroup;
+			children = (
+				BBDE9C9E2E1C119F00FABEC1 /* PhotoGrid */,
+				BBDE9CAC2E1C11A200FABEC1 /* PhotoGridTests */,
+				BBDE9CB62E1C11A200FABEC1 /* PhotoGridUITests */,
+				BBDE9C9D2E1C119F00FABEC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBDE9C9D2E1C119F00FABEC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9C9C2E1C119F00FABEC1 /* PhotoGrid.app */,
+				BBDE9CA92E1C11A200FABEC1 /* PhotoGridTests.xctest */,
+				BBDE9CB32E1C11A200FABEC1 /* PhotoGridUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBDE9C9B2E1C119F00FABEC1 /* PhotoGrid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBDE9CBD2E1C11A200FABEC1 /* Build configuration list for PBXNativeTarget "PhotoGrid" */;
+			buildPhases = (
+				BBDE9C982E1C119F00FABEC1 /* Sources */,
+				BBDE9C992E1C119F00FABEC1 /* Frameworks */,
+				BBDE9C9A2E1C119F00FABEC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BBDE9C9E2E1C119F00FABEC1 /* PhotoGrid */,
+			);
+			name = PhotoGrid;
+			packageProductDependencies = (
+			);
+			productName = PhotoGrid;
+			productReference = BBDE9C9C2E1C119F00FABEC1 /* PhotoGrid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBDE9CA82E1C11A200FABEC1 /* PhotoGridTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBDE9CC02E1C11A200FABEC1 /* Build configuration list for PBXNativeTarget "PhotoGridTests" */;
+			buildPhases = (
+				BBDE9CA52E1C11A200FABEC1 /* Sources */,
+				BBDE9CA62E1C11A200FABEC1 /* Frameworks */,
+				BBDE9CA72E1C11A200FABEC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBDE9CAB2E1C11A200FABEC1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BBDE9CAC2E1C11A200FABEC1 /* PhotoGridTests */,
+			);
+			name = PhotoGridTests;
+			packageProductDependencies = (
+			);
+			productName = PhotoGridTests;
+			productReference = BBDE9CA92E1C11A200FABEC1 /* PhotoGridTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBDE9CB22E1C11A200FABEC1 /* PhotoGridUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBDE9CC32E1C11A200FABEC1 /* Build configuration list for PBXNativeTarget "PhotoGridUITests" */;
+			buildPhases = (
+				BBDE9CAF2E1C11A200FABEC1 /* Sources */,
+				BBDE9CB02E1C11A200FABEC1 /* Frameworks */,
+				BBDE9CB12E1C11A200FABEC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBDE9CB52E1C11A200FABEC1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BBDE9CB62E1C11A200FABEC1 /* PhotoGridUITests */,
+			);
+			name = PhotoGridUITests;
+			packageProductDependencies = (
+			);
+			productName = PhotoGridUITests;
+			productReference = BBDE9CB32E1C11A200FABEC1 /* PhotoGridUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBDE9C942E1C119F00FABEC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					BBDE9C9B2E1C119F00FABEC1 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					BBDE9CA82E1C11A200FABEC1 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = BBDE9C9B2E1C119F00FABEC1;
+					};
+					BBDE9CB22E1C11A200FABEC1 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = BBDE9C9B2E1C119F00FABEC1;
+					};
+				};
+			};
+			buildConfigurationList = BBDE9C972E1C119F00FABEC1 /* Build configuration list for PBXProject "PhotoGrid" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBDE9C932E1C119F00FABEC1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BBDE9C9D2E1C119F00FABEC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBDE9C9B2E1C119F00FABEC1 /* PhotoGrid */,
+				BBDE9CA82E1C11A200FABEC1 /* PhotoGridTests */,
+				BBDE9CB22E1C11A200FABEC1 /* PhotoGridUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBDE9C9A2E1C119F00FABEC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBDE9CA72E1C11A200FABEC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBDE9CB12E1C11A200FABEC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBDE9C982E1C119F00FABEC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBDE9CA52E1C11A200FABEC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBDE9CAF2E1C11A200FABEC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBDE9CAB2E1C11A200FABEC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBDE9C9B2E1C119F00FABEC1 /* PhotoGrid */;
+			targetProxy = BBDE9CAA2E1C11A200FABEC1 /* PBXContainerItemProxy */;
+		};
+		BBDE9CB52E1C11A200FABEC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBDE9C9B2E1C119F00FABEC1 /* PhotoGrid */;
+			targetProxy = BBDE9CB42E1C11A200FABEC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		BBDE9CBB2E1C11A200FABEC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBDE9CBC2E1C11A200FABEC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBDE9CBE2E1C11A200FABEC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBDE9CBF2E1C11A200FABEC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGrid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBDE9CC12E1C11A200FABEC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGrid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoGrid";
+			};
+			name = Debug;
+		};
+		BBDE9CC22E1C11A200FABEC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGridTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoGrid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoGrid";
+			};
+			name = Release;
+		};
+		BBDE9CC42E1C11A200FABEC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotoGrid;
+			};
+			name = Debug;
+		};
+		BBDE9CC52E1C11A200FABEC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 27YU34ECNS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGridUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PhotoGrid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBDE9C972E1C119F00FABEC1 /* Build configuration list for PBXProject "PhotoGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBDE9CBB2E1C11A200FABEC1 /* Debug */,
+				BBDE9CBC2E1C11A200FABEC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBDE9CBD2E1C11A200FABEC1 /* Build configuration list for PBXNativeTarget "PhotoGrid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBDE9CBE2E1C11A200FABEC1 /* Debug */,
+				BBDE9CBF2E1C11A200FABEC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBDE9CC02E1C11A200FABEC1 /* Build configuration list for PBXNativeTarget "PhotoGridTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBDE9CC12E1C11A200FABEC1 /* Debug */,
+				BBDE9CC22E1C11A200FABEC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBDE9CC32E1C11A200FABEC1 /* Build configuration list for PBXNativeTarget "PhotoGridUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBDE9CC42E1C11A200FABEC1 /* Debug */,
+				BBDE9CC52E1C11A200FABEC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBDE9C942E1C119F00FABEC1 /* Project object */;
+}
