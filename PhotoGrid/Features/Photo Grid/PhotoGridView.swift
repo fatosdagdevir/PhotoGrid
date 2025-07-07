@@ -1,13 +1,8 @@
-//
-//  ContentView.swift
-//  PhotoGrid
-//
-//  Created by Fatma Dagdevir on 07.07.25.
-//
-
 import SwiftUI
 
-struct ContentView: View {
+struct PhotoGridView: View {
+    @ObservedObject var viewModel: PhotoGridViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +15,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    PhotoGridView(
+        viewModel: .init(navigator: Navigator())
+    )
 }

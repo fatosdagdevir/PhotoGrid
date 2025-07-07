@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		BBDE9CCA2E1C11FF00FABEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDE9CC62E1C11FF00FABEC1 /* Assets.xcassets */; };
-		BBDE9CCB2E1C11FF00FABEC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC72E1C11FF00FABEC1 /* ContentView.swift */; };
+		BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */; };
 		BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */; };
 		BBDE9CCF2E1C120200FABEC1 /* PhotoGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CCD2E1C120200FABEC1 /* PhotoGridTests.swift */; };
 		BBDE9CD32E1C120500FABEC1 /* PhotoGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CD02E1C120500FABEC1 /* PhotoGridUITests.swift */; };
 		BBDE9CD42E1C120500FABEC1 /* PhotoGridUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CD12E1C120500FABEC1 /* PhotoGridUITestsLaunchTests.swift */; };
+		BBDE9CDC2E1C12A900FABEC1 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CDB2E1C12A900FABEC1 /* Navigator.swift */; };
+		BBDE9CDE2E1C12C300FABEC1 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CDD2E1C12C300FABEC1 /* AppRootView.swift */; };
+		BBDE9CE02E1C12EB00FABEC1 /* PhotoGridCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CDF2E1C12EB00FABEC1 /* PhotoGridCoordinator.swift */; };
+		BBDE9CE42E1C132C00FABEC1 /* PhotoGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CE32E1C132C00FABEC1 /* PhotoGridViewModel.swift */; };
+		BBDE9CE72E1C14DE00FABEC1 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CE62E1C14DE00FABEC1 /* FavouritesView.swift */; };
+		BBDE9CE92E1C16F800FABEC1 /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CE82E1C16F800FABEC1 /* FavouritesCoordinator.swift */; };
+		BBDE9CEB2E1C170600FABEC1 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CEA2E1C170600FABEC1 /* FavouritesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +44,18 @@
 		BBDE9CA92E1C11A200FABEC1 /* PhotoGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CB32E1C11A200FABEC1 /* PhotoGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CC62E1C11FF00FABEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BBDE9CC72E1C11FF00FABEC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
 		BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridApp.swift; sourceTree = "<group>"; };
 		BBDE9CCD2E1C120200FABEC1 /* PhotoGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridTests.swift; sourceTree = "<group>"; };
 		BBDE9CD02E1C120500FABEC1 /* PhotoGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridUITests.swift; sourceTree = "<group>"; };
 		BBDE9CD12E1C120500FABEC1 /* PhotoGridUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBDE9CDB2E1C12A900FABEC1 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		BBDE9CDD2E1C12C300FABEC1 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		BBDE9CDF2E1C12EB00FABEC1 /* PhotoGridCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridCoordinator.swift; sourceTree = "<group>"; };
+		BBDE9CE32E1C132C00FABEC1 /* PhotoGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewModel.swift; sourceTree = "<group>"; };
+		BBDE9CE62E1C14DE00FABEC1 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		BBDE9CE82E1C16F800FABEC1 /* FavouritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesCoordinator.swift; sourceTree = "<group>"; };
+		BBDE9CEA2E1C170600FABEC1 /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */,
+				BBDE9CDD2E1C12C300FABEC1 /* AppRootView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -144,6 +159,7 @@
 		BBDE9CD82E1C122600FABEC1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BBDE9CDA2E1C129A00FABEC1 /* Navigating */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -151,9 +167,38 @@
 		BBDE9CD92E1C122B00FABEC1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				BBDE9CC72E1C11FF00FABEC1 /* ContentView.swift */,
+				BBDE9CE12E1C12F000FABEC1 /* Photo Grid */,
+				BBDE9CE52E1C14AA00FABEC1 /* Favourites */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		BBDE9CDA2E1C129A00FABEC1 /* Navigating */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9CDB2E1C12A900FABEC1 /* Navigator.swift */,
+			);
+			path = Navigating;
+			sourceTree = "<group>";
+		};
+		BBDE9CE12E1C12F000FABEC1 /* Photo Grid */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9CDF2E1C12EB00FABEC1 /* PhotoGridCoordinator.swift */,
+				BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */,
+				BBDE9CE32E1C132C00FABEC1 /* PhotoGridViewModel.swift */,
+			);
+			path = "Photo Grid";
+			sourceTree = "<group>";
+		};
+		BBDE9CE52E1C14AA00FABEC1 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9CE82E1C16F800FABEC1 /* FavouritesCoordinator.swift */,
+				BBDE9CE62E1C14DE00FABEC1 /* FavouritesView.swift */,
+				BBDE9CEA2E1C170600FABEC1 /* FavouritesViewModel.swift */,
+			);
+			path = Favourites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +337,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDE9CCB2E1C11FF00FABEC1 /* ContentView.swift in Sources */,
+				BBDE9CDE2E1C12C300FABEC1 /* AppRootView.swift in Sources */,
+				BBDE9CE42E1C132C00FABEC1 /* PhotoGridViewModel.swift in Sources */,
+				BBDE9CEB2E1C170600FABEC1 /* FavouritesViewModel.swift in Sources */,
+				BBDE9CE92E1C16F800FABEC1 /* FavouritesCoordinator.swift in Sources */,
+				BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */,
 				BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */,
+				BBDE9CE02E1C12EB00FABEC1 /* PhotoGridCoordinator.swift in Sources */,
+				BBDE9CE72E1C14DE00FABEC1 /* FavouritesView.swift in Sources */,
+				BBDE9CDC2E1C12A900FABEC1 /* Navigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
