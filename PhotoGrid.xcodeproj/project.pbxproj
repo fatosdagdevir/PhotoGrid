@@ -20,6 +20,8 @@
 		BBDE9CE72E1C14DE00FABEC1 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CE62E1C14DE00FABEC1 /* FavouritesView.swift */; };
 		BBDE9CE92E1C16F800FABEC1 /* FavouritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CE82E1C16F800FABEC1 /* FavouritesCoordinator.swift */; };
 		BBDE9CEB2E1C170600FABEC1 /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CEA2E1C170600FABEC1 /* FavouritesViewModel.swift */; };
+		BBDE9CEE2E1C195B00FABEC1 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = BBDE9CED2E1C195B00FABEC1 /* Networking */; };
+		BBDE9CF12E1C1A6500FABEC1 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = BBDE9CF02E1C1A6500FABEC1 /* Networking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDE9CF12E1C1A6500FABEC1 /* Networking in Frameworks */,
+				BBDE9CEE2E1C195B00FABEC1 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +222,8 @@
 			);
 			name = PhotoGrid;
 			packageProductDependencies = (
+				BBDE9CED2E1C195B00FABEC1 /* Networking */,
+				BBDE9CF02E1C1A6500FABEC1 /* Networking */,
 			);
 			productName = PhotoGrid;
 			productReference = BBDE9C9C2E1C119F00FABEC1 /* PhotoGrid.app */;
@@ -295,6 +301,9 @@
 			);
 			mainGroup = BBDE9C932E1C119F00FABEC1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BBDE9CEF2E1C1A6500FABEC1 /* XCLocalSwiftPackageReference "Networking" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BBDE9C9D2E1C119F00FABEC1 /* Products */;
 			projectDirPath = "";
@@ -671,6 +680,24 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		BBDE9CEF2E1C1A6500FABEC1 /* XCLocalSwiftPackageReference "Networking" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Networking;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBDE9CED2E1C195B00FABEC1 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+		BBDE9CF02E1C1A6500FABEC1 /* Networking */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Networking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BBDE9C942E1C119F00FABEC1 /* Project object */;
 }
