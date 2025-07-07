@@ -9,7 +9,8 @@ struct PhotoGridCoordinator: View {
     ) {
         self.navigator = navigator
         self._viewModel = StateObject(wrappedValue: PhotoGridViewModel(
-            navigator: navigator
+            navigator: navigator,
+            fetchPhotoGridUseCase: FetchPhotoGridUseCase(photoProvider: PhotoProvider())
         ))
     }
     
