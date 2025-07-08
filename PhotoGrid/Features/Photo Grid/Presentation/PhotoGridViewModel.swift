@@ -18,6 +18,7 @@ final class PhotoGridViewModel: ObservableObject {
         self.fetchPhotoGridUseCase = fetchPhotoGridUseCase
     }
     
+    // MARK: - Public Functions
     func fetchPhotoGrid() async {
         do {
             let photos = try await fetchPhotoGridUseCase.fetchPhotoGrid()
@@ -32,5 +33,9 @@ final class PhotoGridViewModel: ObservableObject {
             //TODO: Handle Error
             viewState = .error
         }
+    }
+
+    func navigateToPhotoDetail(photo: Photo) {
+        navigator.navigate(to: .photoDetail(photo: photo))
     }
 }

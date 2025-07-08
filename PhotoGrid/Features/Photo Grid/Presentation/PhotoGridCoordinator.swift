@@ -16,5 +16,16 @@ struct PhotoGridCoordinator: View {
     
     var body: some View {
         PhotoGridView(viewModel: viewModel)
+            .navigationDestination(for: NavigationDestination.self) { destination in
+                switch destination {
+                case .photoDetail(let photo):
+                    PhotoDetailView(
+                        photo: photo,
+                        onDismiss: {
+                            navigator.navigateBack()
+                        }
+                    )
+                }
+            }
     }
 }

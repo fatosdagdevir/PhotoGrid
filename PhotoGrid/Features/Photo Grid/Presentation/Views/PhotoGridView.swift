@@ -50,7 +50,12 @@ struct PhotoGridView: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 8) {
                 ForEach(photos) { photo in
-                    PhotoGridItemView(photo: photo)
+                    PhotoGridItemView(
+                        photo: photo,
+                        onTap: {
+                            viewModel.navigateToPhotoDetail(photo: photo)
+                        }
+                    )
                 }
             }
             .padding(8)
