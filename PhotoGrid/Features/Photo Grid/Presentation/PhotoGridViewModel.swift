@@ -34,8 +34,8 @@ final class PhotoGridViewModel: ObservableObject {
             viewState = .error
         }
     }
-
-    func navigateToPhotoDetail(photo: Photo) {
-        navigator.navigate(to: .photoDetail(photo: photo))
+    
+    func presentPhotoDetail(photo: Photo) {
+        navigator.presentSheet(.photoDetail(photo: photo))
     }
 }

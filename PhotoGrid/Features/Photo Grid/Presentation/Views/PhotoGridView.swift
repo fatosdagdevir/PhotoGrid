@@ -53,7 +53,7 @@ struct PhotoGridView: View {
                     PhotoGridItemView(
                         photo: photo,
                         onTap: {
-                            viewModel.navigateToPhotoDetail(photo: photo)
+                            viewModel.presentPhotoDetail(photo: photo)
                         }
                     )
                 }
