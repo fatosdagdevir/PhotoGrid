@@ -37,6 +37,7 @@
 		BBDE9D1F2E1DB56800FABEC1 /* PreviewProvider+PhotoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D1E2E1DB56800FABEC1 /* PreviewProvider+PhotoDetailViewModel.swift */; };
 		BBDE9D212E1DB62000FABEC1 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D202E1DB61000FABEC1 /* PhotoService.swift */; };
 		BBDE9D212E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D202E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift */; };
+		BBDE9D282E1EABFB00FABEC1 /* MockFavouritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		BBDE9D1E2E1DB56800FABEC1 /* PreviewProvider+PhotoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+PhotoDetailViewModel.swift"; sourceTree = "<group>"; };
 		BBDE9D202E1DB61000FABEC1 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		BBDE9D202E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+FavouritesViewModel.swift"; sourceTree = "<group>"; };
+		BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouritesManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		BBDE9CD62E1C121A00FABEC1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				BBDE9D262E1EABF300FABEC1 /* Mocks */,
 				BBDE9D092E1C5F5900FABEC1 /* Preview Helpers */,
 				BBDE9D042E1C5ADF00FABEC1 /* Components */,
 			);
@@ -330,6 +333,14 @@
 			path = "Photo Detail";
 			sourceTree = "<group>";
 		};
+		BBDE9D262E1EABF300FABEC1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,6 +489,7 @@
 				BBDE9CE42E1C132C00FABEC1 /* PhotoGridViewModel.swift in Sources */,
 				BBDE9CEB2E1C170600FABEC1 /* FavouritesViewModel.swift in Sources */,
 				BBDE9CE92E1C16F800FABEC1 /* FavouritesCoordinator.swift in Sources */,
+				BBDE9D282E1EABFB00FABEC1 /* MockFavouritesManager.swift in Sources */,
 				BBDE9D1A2E1D9CF300FABEC1 /* FavouritePhoto.swift in Sources */,
 				BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */,
 				BBDE9D0B2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift in Sources */,

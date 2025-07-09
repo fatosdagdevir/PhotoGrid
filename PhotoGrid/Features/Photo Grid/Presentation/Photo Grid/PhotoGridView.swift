@@ -55,6 +55,7 @@ struct PhotoGridView: View {
                 ForEach(photos) { photo in
                     PhotoGridItemView(
                         photo: photo,
+                        isFavourite: viewModel.isFavourite(photo.id),
                         onTap: {
                             viewModel.presentPhotoDetail(photo: photo)
                         }
@@ -86,5 +87,13 @@ struct PhotoGridView_Previews: PreviewProvider {
             )
         }
         .previewDisplayName("Loading")
+        
+        // MARK: Loading
+        NavigationView {
+            PhotoGridView(
+                viewModel: previewGridViewModel(state: .empty)
+            )
+        }
+        .previewDisplayName("Empty")
     }
 }

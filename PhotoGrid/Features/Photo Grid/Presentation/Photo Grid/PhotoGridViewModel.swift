@@ -8,13 +8,16 @@ final class PhotoGridViewModel: ObservableObject {
     // MARK: - Private Properties
     private let navigator: Navigating
     private let photoService: PhotoService
+    private let favouritesManager: FavouritesManaging
     
     init(
         navigator: Navigating,
-        photoService: PhotoService
+        photoService: PhotoService,
+        favouritesManager: FavouritesManaging
     ) {
         self.navigator = navigator
         self.photoService = photoService
+        self.favouritesManager = favouritesManager
     }
     
     // MARK: - Public Functions
@@ -35,5 +38,9 @@ final class PhotoGridViewModel: ObservableObject {
     
     func presentPhotoDetail(photo: Photo) {
         navigator.presentSheet(.photoDetail(photo: photo))
+    }
+    
+    func isFavourite(_ photoId: String) -> Bool {
+        favouritesManager.isFavourite(photoId)
     }
 }

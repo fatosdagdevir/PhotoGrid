@@ -52,8 +52,10 @@ struct PhotoDetailView: View {
 
 struct PhotoDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PhotoDetailView(
-            viewModel: previewPhotoDetailViewModel
-        )
+        NavigationStack {
+            PhotoDetailView(
+                viewModel: previewPhotoDetailViewModel
+            )
+        }
     }
 }

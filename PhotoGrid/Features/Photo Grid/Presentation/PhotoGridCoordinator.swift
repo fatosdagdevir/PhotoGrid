@@ -20,7 +20,8 @@ struct PhotoGridCoordinator: View {
         
         self._viewModel = StateObject(wrappedValue: PhotoGridViewModel(
             navigator: navigator,
-            photoService: photoService
+            photoService: photoService,
+            favouritesManager: favouritesManager
         ))
     }
     

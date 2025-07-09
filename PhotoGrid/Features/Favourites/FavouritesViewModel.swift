@@ -4,7 +4,6 @@ import Foundation
 final class FavouritesViewModel: ObservableObject {
     // MARK: - Published Properties
     @Published var viewState: FavouritesView.ViewState = .loading
-    @Published var favouriteIds: Set<String> = []
     
     // MARK: - Private Properties
     private let navigator: Navigating
@@ -39,7 +38,7 @@ final class FavouritesViewModel: ObservableObject {
     }
     
     func isFavourite(_ photoId: String) -> Bool {
-        favouriteIds.contains(photoId)
+        favouritesManager.isFavourite(photoId)
     }
     
     func presentPhotoDetail(photo: Photo) {
@@ -48,7 +47,7 @@ final class FavouritesViewModel: ObservableObject {
     
     // MARK: - Private Functions
     private func filterFavouritePhotos(with photos: [Photo]) -> [Photo] {
-        favouriteIds = Set(favouritesManager.getAllFavouriteIds())
+        let favouriteIds = Set(favouritesManager.getAllFavouriteIds())
         return photos.filter { favouriteIds.contains($0.id) }
     }
 }

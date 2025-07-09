@@ -56,6 +56,7 @@ struct FavouritesView: View {
                 ForEach(photos) { photo in
                     PhotoGridItemView(
                         photo: photo,
+                        isFavourite: true,
                         onTap: {
                             viewModel.presentPhotoDetail(photo: photo)
                         }
