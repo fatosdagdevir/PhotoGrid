@@ -1,20 +1,16 @@
 import Foundation
 
-@MainActor
-final class PhotoService: ObservableObject {
+final class PhotoService {
     enum LoadState {
         case idle
         case loading
         case loaded
     }
     
-    // MARK: - Published Properties
-    @Published private(set) var photos: [Photo] = []
-    @Published private(set) var state: LoadState = .idle
-    
     // MARK: - Private Properties
     private let photoProvider: PhotoProviding
-    private var hasLoaded = false
+    private var photos: [Photo] = []
+    private var state: LoadState = .idle
     
     init(photoProvider: PhotoProviding) {
         self.photoProvider = photoProvider
@@ -30,10 +26,6 @@ final class PhotoService: ObservableObject {
         self.photos = result
         state = .loaded
         return result
-    }
-    
-    func fetchPhotoGrid() async throws -> [Photo] {
-        try await photoProvider.fetchPhotoGrid()
     }
     
     func refreshPhotos() async throws -> [Photo] {

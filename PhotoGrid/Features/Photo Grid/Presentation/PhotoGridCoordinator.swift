@@ -3,20 +3,18 @@ import SwiftUI
 struct PhotoGridCoordinator: View {
     @Environment(\.modelContext) private var modelContext
     @ObservedObject var navigator: Navigator
-    @StateObject private var photoService: PhotoService
+    private let photoService: PhotoService
     @StateObject private var viewModel: PhotoGridViewModel
     private let favouritesManager: FavouritesManaging
     
     init(
         navigator: Navigator,
+        photoService: PhotoService,
         favouritesManager: FavouritesManaging
     ) {
         self.navigator = navigator
+        self.photoService = photoService
         self.favouritesManager = favouritesManager
-        
-        let photoProvider = PhotoProvider()
-        let photoService = PhotoService(photoProvider: photoProvider)
-        self._photoService = StateObject(wrappedValue: photoService)
         
         self._viewModel = StateObject(wrappedValue: PhotoGridViewModel(
             navigator: navigator,

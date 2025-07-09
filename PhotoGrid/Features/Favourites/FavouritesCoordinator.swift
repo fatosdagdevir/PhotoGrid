@@ -2,17 +2,18 @@ import SwiftUI
 
 struct FavouritesCoordinator: View {
     @ObservedObject var navigator: Navigator
-    @StateObject private var photoService: PhotoService
     @StateObject private var viewModel: FavouritesViewModel
+    private let photoService: PhotoService
     private let favouritesManager: FavouritesManaging
     
-    init(navigator: Navigator, favouritesManager: FavouritesManaging) {
+    init(
+        navigator: Navigator,
+        photoService: PhotoService,
+        favouritesManager: FavouritesManaging
+    ) {
         self.navigator = navigator
+        self.photoService = photoService
         self.favouritesManager = favouritesManager
-        
-        let photoProvider = PhotoProvider()
-        let photoService = PhotoService(photoProvider: photoProvider)
-        self._photoService = StateObject(wrappedValue: photoService)
         
         self._viewModel = StateObject(wrappedValue: FavouritesViewModel(
             navigator: navigator,
