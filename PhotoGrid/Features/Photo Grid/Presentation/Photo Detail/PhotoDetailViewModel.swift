@@ -21,8 +21,8 @@ final class PhotoDetailViewModel: ObservableObject {
         self.photo = photo
     }
     
-    func checkFavouriteStatus() {
-        isFavourite = favouritesManager.isFavourite(photo.id)
+    func checkFavouriteStatus() async {
+        isFavourite = await favouritesManager.isFavourite(photo.id)
     }
     
     func dismiss() {

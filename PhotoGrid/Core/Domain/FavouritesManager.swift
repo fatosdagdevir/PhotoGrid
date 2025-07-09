@@ -4,10 +4,11 @@ import SwiftData
 protocol FavouritesManaging {
     func addToFavourites(_ photoId: String) async
     func removeFromFavourites(_ photoId: String) async
-    func isFavourite(_ photoId: String) -> Bool
-    func getAllFavouriteIds() -> Set<String>
+    func isFavourite(_ photoId: String) async -> Bool
+    func getAllFavouriteIds() async -> Set<String>
 }
 
+@MainActor
 final class FavouritesManager: FavouritesManaging {
     private let modelContext: ModelContext
     
@@ -30,14 +31,14 @@ final class FavouritesManager: FavouritesManaging {
         try? modelContext.save()
     }
     
-    nonisolated func isFavourite(_ photoId: String) -> Bool {
+    func isFavourite(_ photoId: String) async -> Bool {
         let descriptor = FetchDescriptor<FavouritePhoto>(
             predicate: #Predicate { $0.photoId == photoId }
         )
         return (try? modelContext.fetchCount(descriptor)) ?? 0 > 0
     }
     
-    nonisolated func getAllFavouriteIds() -> Set<String> {
+    func getAllFavouriteIds() async -> Set<String> {
         let favourites = (try? modelContext.fetch(FetchDescriptor<FavouritePhoto>())) ?? []
         return Set(favourites.map(\.photoId))
     }

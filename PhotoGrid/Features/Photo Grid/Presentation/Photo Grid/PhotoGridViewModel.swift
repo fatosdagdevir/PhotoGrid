@@ -4,6 +4,7 @@ import Foundation
 final class PhotoGridViewModel: ObservableObject {
     // MARK: - Published Properties
     @Published var viewState: PhotoGridView.ViewState = .loading
+    @Published var favouriteStatuses: [String: Bool] = [:]
     
     // MARK: - Private Properties
     private let navigator: Navigating
@@ -31,6 +32,7 @@ final class PhotoGridViewModel: ObservableObject {
             }
             
             viewState = .ready(photos: photos)
+            await loadFavouriteStatuses(for: photos)
         } catch {
             viewState = .error
         }
@@ -41,6 +43,14 @@ final class PhotoGridViewModel: ObservableObject {
     }
     
     func isFavourite(_ photoId: String) -> Bool {
-        favouritesManager.isFavourite(photoId)
+        favouriteStatuses[photoId] ?? false
+    }
+  
+    // MARK: - Private Functions
+    private func loadFavouriteStatuses(for photos: [Photo]) async {
+        for photo in photos {
+            let isFav = await favouritesManager.isFavourite(photo.id)
+            favouriteStatuses[photo.id] = isFav
+        }
     }
 }

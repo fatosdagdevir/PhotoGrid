@@ -24,7 +24,7 @@ final class FavouritesViewModel: ObservableObject {
     func loadFavourites() async {
         do {
             let photos = try await photoService.fetchPhotos()
-            let filteredFavouritePhotos = filterFavouritePhotos(with: photos)
+            let filteredFavouritePhotos = await filterFavouritePhotos(with: photos)
             
             guard !filteredFavouritePhotos.isEmpty else {
                 viewState = .empty
@@ -37,8 +37,8 @@ final class FavouritesViewModel: ObservableObject {
         }
     }
     
-    func isFavourite(_ photoId: String) -> Bool {
-        favouritesManager.isFavourite(photoId)
+    func isFavourite(_ photoId: String) async -> Bool {
+        await favouritesManager.isFavourite(photoId)
     }
     
     func presentPhotoDetail(photo: Photo) {
@@ -51,8 +51,8 @@ final class FavouritesViewModel: ObservableObject {
     }
     
     // MARK: - Private Functions
-    private func filterFavouritePhotos(with photos: [Photo]) -> [Photo] {
-        let favouriteIds = Set(favouritesManager.getAllFavouriteIds())
+    private func filterFavouritePhotos(with photos: [Photo]) async -> [Photo] {
+        let favouriteIds = await favouritesManager.getAllFavouriteIds()
         return photos.filter { favouriteIds.contains($0.id) }
     }
 }

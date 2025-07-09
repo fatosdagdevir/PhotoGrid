@@ -24,7 +24,7 @@ struct PhotoDetailView: View {
             }
         }
         .task {
-            viewModel.checkFavouriteStatus()
+            await viewModel.checkFavouriteStatus()
         }
     }
     
