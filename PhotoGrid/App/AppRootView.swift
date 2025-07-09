@@ -1,7 +1,13 @@
 import SwiftUI
+import SwiftData
 
 struct AppRootView: View {
     @StateObject private var navigator: Navigator
+    @Environment(\.modelContext) private var modelContext
+    
+    private var favouritesManager: FavouritesManaging {
+        FavouritesManager(modelContext: modelContext)
+    }
     
     init() {
         let navigator = Navigator()
@@ -11,7 +17,10 @@ struct AppRootView: View {
     var body: some View {
         TabView {
             NavigationStack(path: $navigator.path) {
-                PhotoGridCoordinator(navigator: navigator)
+                PhotoGridCoordinator(
+                    navigator: navigator,
+                    favouritesManager: favouritesManager
+                )
             }
             .tabItem {
                 Image(systemName: "photo.on.rectangle.angled")
@@ -19,12 +28,16 @@ struct AppRootView: View {
             }
             
             NavigationStack(path: $navigator.path) {
-                FavouritesCoordinator(navigator: navigator)
+                FavouritesCoordinator(
+                    navigator: navigator,
+                    favouritesManager: favouritesManager
+                )
             }
             .tabItem {
                 Image(systemName: "heart.fill")
                 Text("Favourites")
             }
         }
+        .modelContainer(for: FavouritePhoto.self)
     }
 }

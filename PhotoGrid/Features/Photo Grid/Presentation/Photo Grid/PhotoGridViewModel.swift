@@ -1,5 +1,4 @@
 import Foundation
-import Networking
 
 @MainActor
 final class PhotoGridViewModel: ObservableObject {
@@ -8,20 +7,20 @@ final class PhotoGridViewModel: ObservableObject {
     
     // MARK: - Private Properties
     private let navigator: Navigating
-    private let fetchPhotoGridUseCase: FetchPhotoGridUseCase
+    private let photoService: PhotoService
     
     init(
         navigator: Navigating,
-        fetchPhotoGridUseCase: FetchPhotoGridUseCase
+        photoService: PhotoService
     ) {
         self.navigator = navigator
-        self.fetchPhotoGridUseCase = fetchPhotoGridUseCase
+        self.photoService = photoService
     }
     
     // MARK: - Public Functions
     func fetchPhotoGrid() async {
         do {
-            let photos = try await fetchPhotoGridUseCase.fetchPhotoGrid()
+            let photos = try await photoService.fetchPhotos()
             
             guard !photos.isEmpty else {
                 viewState = .empty
@@ -30,7 +29,6 @@ final class PhotoGridViewModel: ObservableObject {
             
             viewState = .ready(photos: photos)
         } catch {
-            //TODO: Handle Error
             viewState = .error
         }
     }
