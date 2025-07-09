@@ -23,7 +23,7 @@ struct PhotoDetailView: View {
                 dismissButton
             }
         }
-        .onAppear {
+        .task {
             viewModel.checkFavouriteStatus()
         }
     }

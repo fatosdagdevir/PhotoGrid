@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct PhotoGridApp: App {
@@ -6,5 +7,6 @@ struct PhotoGridApp: App {
         WindowGroup {
             AppRootView()
         }
+        .modelContainer(for: FavouritePhoto.self)
     }
 }

@@ -38,6 +38,5 @@ struct AppRootView: View {
                 Text("Favourites")
             }
         }
-        .modelContainer(for: FavouritePhoto.self)
     }
 }
