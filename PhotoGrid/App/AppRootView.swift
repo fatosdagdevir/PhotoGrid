@@ -2,14 +2,17 @@ import SwiftUI
 import SwiftData
 
 struct AppRootView: View {
-    @StateObject private var navigator: Navigator
+    @StateObject private var photoGridNavigator: Navigator
+    @StateObject private var favouritesNavigator: Navigator
     @State private var photoService: PhotoService
     @State private var favouritesManager: FavouritesManaging
     @Environment(\.modelContext) private var modelContext
     
     init() {
-        let navigator = Navigator()
-        self._navigator = StateObject(wrappedValue: navigator)
+        let photoGridNavigator = Navigator()
+        let favouritesNavigator = Navigator()
+        self._photoGridNavigator = StateObject(wrappedValue: photoGridNavigator)
+        self._favouritesNavigator = StateObject(wrappedValue: favouritesNavigator)
         
         let photoProvider = PhotoProvider()
         let photoService = PhotoService(photoProvider: photoProvider)
@@ -23,9 +26,9 @@ struct AppRootView: View {
     
     var body: some View {
         TabView {
-            NavigationStack(path: $navigator.path) {
+            NavigationStack(path: $photoGridNavigator.path) {
                 PhotoGridCoordinator(
-                    navigator: navigator,
+                    navigator: photoGridNavigator,
                     photoService: photoService,
                     favouritesManager: favouritesManager
                 )
@@ -35,9 +38,9 @@ struct AppRootView: View {
                 Text("Photo Grid")
             }
             
-            NavigationStack(path: $navigator.path) {
+            NavigationStack(path: $favouritesNavigator.path) {
                 FavouritesCoordinator(
-                    navigator: navigator,
+                    navigator: favouritesNavigator,
                     photoService: photoService,
                     favouritesManager: favouritesManager
                 )
