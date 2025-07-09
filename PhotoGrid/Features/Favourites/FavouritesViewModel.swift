@@ -37,7 +37,7 @@ final class FavouritesViewModel: ObservableObject {
             
             viewState = .ready(photos: filteredFavouritePhotos)
         } catch {
-            viewState = .error
+            handleError(error)
         }
     }
     
@@ -66,5 +66,22 @@ final class FavouritesViewModel: ObservableObject {
     private func filterFavouritePhotos(with photos: [Photo]) async -> [Photo] {
         let favouriteIds = await favouritesManager.getAllFavouriteIds()
         return photos.filter { favouriteIds.contains($0.id) }
+    }
+    
+    private func refresh() async {
+        viewState = .loading
+        
+        await loadFavourites()
+    }
+    
+    private func handleError(_ error: Error) {
+        viewState = .error(
+            viewModel: ErrorViewModel(
+                error: error,
+                action: { @MainActor [weak self] in
+                    await self?.refresh()
+                }
+            )
+        )
     }
 }

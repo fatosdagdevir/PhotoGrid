@@ -38,7 +38,7 @@ final class PhotoGridViewModel: ObservableObject {
             viewState = .ready(photos: photos)
             await loadFavouriteStatuses(for: photos)
         } catch {
-            viewState = .error
+            handleError(error)
         }
     }
     
@@ -82,5 +82,22 @@ final class PhotoGridViewModel: ObservableObject {
                 favouriteStatuses[id] = isFav
             }
         }
+    }
+    
+    private func refresh() async {
+        viewState = .loading
+        
+        await fetchPhotoGrid()
+    }
+    
+    private func handleError(_ error: Error) {
+        viewState = .error(
+            viewModel: ErrorViewModel(
+                error: error,
+                action: { @MainActor [weak self] in
+                    await self?.refresh()
+                }
+            )
+        )
     }
 }

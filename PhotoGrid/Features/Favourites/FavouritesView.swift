@@ -5,7 +5,7 @@ struct FavouritesView: View {
         case loading
         case ready(photos: [Photo])
         case empty
-        case error
+        case error(viewModel: ErrorViewModel)
     }
     
     @ObservedObject var viewModel: FavouritesViewModel
@@ -19,8 +19,8 @@ struct FavouritesView: View {
                 emptyView
             case .ready(let favPhotos):
                 photoList(with: favPhotos)
-            case .error:
-                Text("Opps!")
+            case .error(let viewModel):
+                ErrorView(viewModel: viewModel)
             }
         }
         .task {
@@ -100,6 +100,16 @@ struct FavouritesView_Previews: PreviewProvider {
             )
         }
         .previewDisplayName("Empty")
+        
+        // MARK: Error
+        NavigationView {
+            FavouritesView(
+                viewModel: previewFavouritesViewModel(
+                    state: .error(viewModel: previewErrorViewModel)
+                )
+            )
+        }
+        .previewDisplayName("Error")
     }
 }
 

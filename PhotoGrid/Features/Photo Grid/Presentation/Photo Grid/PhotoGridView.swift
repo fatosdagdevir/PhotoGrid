@@ -5,7 +5,7 @@ struct PhotoGridView: View {
         case loading
         case ready(photos: [Photo])
         case empty
-        case error
+        case error(viewModel: ErrorViewModel)
     }
     
     @ObservedObject var viewModel: PhotoGridViewModel
@@ -24,8 +24,8 @@ struct PhotoGridView: View {
                 photoGrid(with: photos)
             case .empty:
                 emptyView
-            case .error:
-                Text("Oppss!!")
+            case .error(let viewModel):
+                ErrorView(viewModel: viewModel)
             }
         }
         .task {
@@ -95,5 +95,15 @@ struct PhotoGridView_Previews: PreviewProvider {
             )
         }
         .previewDisplayName("Empty")
+        
+        // MARK: Error
+        NavigationView {
+            PhotoGridView(
+                viewModel: previewGridViewModel(
+                    state: .error(viewModel: previewErrorViewModel)
+                )
+            )
+        }
+        .previewDisplayName("Error")
     }
 }

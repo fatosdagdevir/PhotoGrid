@@ -40,6 +40,9 @@
 		BBDE9D282E1EABFB00FABEC1 /* MockFavouritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */; };
 		BBDE9D2A2E1EB1B400FABEC1 /* PhotoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D292E1EB1B400FABEC1 /* PhotoListItemView.swift */; };
 		BBDE9D2F2E1EB79500FABEC1 /* PlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D2E2E1EB79500FABEC1 /* PlaceholderImageView.swift */; };
+		BBDE9D312E1F0A4600FABEC1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D302E1F0A4600FABEC1 /* ErrorView.swift */; };
+		BBDE9D332E1F0A6600FABEC1 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D322E1F0A6600FABEC1 /* ErrorViewModel.swift */; };
+		BBDE9D352E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D342E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouritesManager.swift; sourceTree = "<group>"; };
 		BBDE9D292E1EB1B400FABEC1 /* PhotoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListItemView.swift; sourceTree = "<group>"; };
 		BBDE9D2E2E1EB79500FABEC1 /* PlaceholderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImageView.swift; sourceTree = "<group>"; };
+		BBDE9D302E1F0A4600FABEC1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		BBDE9D322E1F0A6600FABEC1 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
+		BBDE9D342E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+ErrorViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +312,8 @@
 			children = (
 				BBDE9D052E1C5AEB00FABEC1 /* NetworkImageView.swift */,
 				BBDE9D2E2E1EB79500FABEC1 /* PlaceholderImageView.swift */,
+				BBDE9D302E1F0A4600FABEC1 /* ErrorView.swift */,
+				BBDE9D322E1F0A6600FABEC1 /* ErrorViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -316,6 +324,7 @@
 				BBDE9D0A2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift */,
 				BBDE9D1E2E1DB56800FABEC1 /* PreviewProvider+PhotoDetailViewModel.swift */,
 				BBDE9D202E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift */,
+				BBDE9D342E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift */,
 			);
 			path = "Preview Helpers";
 			sourceTree = "<group>";
@@ -504,15 +513,18 @@
 				BBDE9CEB2E1C170600FABEC1 /* FavouritesViewModel.swift in Sources */,
 				BBDE9CE92E1C16F800FABEC1 /* FavouritesCoordinator.swift in Sources */,
 				BBDE9D282E1EABFB00FABEC1 /* MockFavouritesManager.swift in Sources */,
+				BBDE9D332E1F0A6600FABEC1 /* ErrorViewModel.swift in Sources */,
 				BBDE9D1A2E1D9CF300FABEC1 /* FavouritePhoto.swift in Sources */,
 				BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */,
 				BBDE9D2A2E1EB1B400FABEC1 /* PhotoListItemView.swift in Sources */,
+				BBDE9D312E1F0A4600FABEC1 /* ErrorView.swift in Sources */,
 				BBDE9D0B2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift in Sources */,
 				BBDE9D0F2E1C6C5B00FABEC1 /* PhotoGridItemView.swift in Sources */,
 				BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */,
 				BBDE9D062E1C5AEB00FABEC1 /* NetworkImageView.swift in Sources */,
 				BBDE9CFB2E1C3CC900FABEC1 /* AppConstants.swift in Sources */,
 				BBDE9CE02E1C12EB00FABEC1 /* PhotoGridCoordinator.swift in Sources */,
+				BBDE9D352E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift in Sources */,
 				BBDE9CE72E1C14DE00FABEC1 /* FavouritesView.swift in Sources */,
 				BBDE9D212E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift in Sources */,
 				BBDE9D2F2E1EB79500FABEC1 /* PlaceholderImageView.swift in Sources */,
