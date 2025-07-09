@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 @MainActor
 final class PhotoGridViewModel: ObservableObject {
@@ -10,6 +11,7 @@ final class PhotoGridViewModel: ObservableObject {
     private let navigator: Navigating
     private let photoService: PhotoService
     private let favouritesManager: FavouritesManaging
+    private var cancellables = Set<AnyCancellable>()
     
     init(
         navigator: Navigating,
@@ -19,6 +21,8 @@ final class PhotoGridViewModel: ObservableObject {
         self.navigator = navigator
         self.photoService = photoService
         self.favouritesManager = favouritesManager
+        
+        setupFavouriteStatusSubscription()
     }
     
     // MARK: - Public Functions
@@ -45,12 +49,38 @@ final class PhotoGridViewModel: ObservableObject {
     func isFavourite(_ photoId: String) -> Bool {
         favouriteStatuses[photoId] ?? false
     }
-  
+    
     // MARK: - Private Functions
+    private func setupFavouriteStatusSubscription() {
+        favouritesManager.favouriteStatusPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] photoId in
+                Task {
+                    await self?.updateFavouriteStatus(for: photoId)
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func updateFavouriteStatus(for photoId: String) async {
+        let isFav = await favouritesManager.isFavourite(photoId)
+        favouriteStatuses[photoId] = isFav
+    }
+    
     private func loadFavouriteStatuses(for photos: [Photo]) async {
-        for photo in photos {
-            let isFav = await favouritesManager.isFavourite(photo.id)
-            favouriteStatuses[photo.id] = isFav
+        await withTaskGroup(of: (String, Bool).self) { group in
+            for photo in photos {
+                group.addTask { [weak self] in
+                    guard let self else { return (photo.id, false) }
+                    
+                    let isFav = await favouritesManager.isFavourite(photo.id)
+                    return (photo.id, isFav)
+                }
+            }
+
+            for await (id, isFav) in group {
+                favouriteStatuses[id] = isFav
+            }
         }
     }
 }

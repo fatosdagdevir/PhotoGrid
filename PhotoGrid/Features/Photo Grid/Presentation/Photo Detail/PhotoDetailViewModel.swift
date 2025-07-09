@@ -1,5 +1,4 @@
 import Foundation
-import SwiftData
 
 @MainActor
 final class PhotoDetailViewModel: ObservableObject {
@@ -32,10 +31,10 @@ final class PhotoDetailViewModel: ObservableObject {
     func toggleFavourite() async {
         if isFavourite {
             await favouritesManager.removeFromFavourites(photo.id)
-            isFavourite = false
         } else {
             await favouritesManager.addToFavourites(photo.id)
-            isFavourite = true
         }
+        
+        isFavourite.toggle()
     }
 }

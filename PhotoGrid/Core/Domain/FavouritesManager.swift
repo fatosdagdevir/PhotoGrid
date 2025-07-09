@@ -1,16 +1,24 @@
 import Foundation
 import SwiftData
+import Combine
 
+@MainActor
 protocol FavouritesManaging {
     func addToFavourites(_ photoId: String) async
     func removeFromFavourites(_ photoId: String) async
     func isFavourite(_ photoId: String) async -> Bool
     func getAllFavouriteIds() async -> Set<String>
+    var favouriteStatusPublisher: AnyPublisher<String, Never> { get }
 }
 
 @MainActor
 final class FavouritesManager: FavouritesManaging {
     private let modelContext: ModelContext
+    private let favouriteStatusSubject = PassthroughSubject<String, Never>()
+    
+    var favouriteStatusPublisher: AnyPublisher<String, Never> {
+        favouriteStatusSubject.eraseToAnyPublisher()
+    }
     
     init(modelContext: ModelContext) {
         self.modelContext = modelContext
@@ -20,6 +28,7 @@ final class FavouritesManager: FavouritesManaging {
         let favourite = FavouritePhoto(photoId: photoId)
         modelContext.insert(favourite)
         try? modelContext.save()
+        favouriteStatusSubject.send(photoId)
     }
     
     func removeFromFavourites(_ photoId: String) async {
@@ -29,6 +38,7 @@ final class FavouritesManager: FavouritesManaging {
         let favourites = try? modelContext.fetch(descriptor)
         favourites?.forEach { modelContext.delete($0) }
         try? modelContext.save()
+        favouriteStatusSubject.send(photoId)
     }
     
     func isFavourite(_ photoId: String) async -> Bool {

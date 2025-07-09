@@ -1,4 +1,5 @@
 import Foundation
+import Combine
 
 @MainActor
 final class FavouritesViewModel: ObservableObject {
@@ -9,6 +10,7 @@ final class FavouritesViewModel: ObservableObject {
     private let navigator: Navigating
     private let photoService: PhotoService
     private let favouritesManager: FavouritesManaging
+    private var cancellables = Set<AnyCancellable>()
     
     init(
         navigator: Navigating,
@@ -18,6 +20,8 @@ final class FavouritesViewModel: ObservableObject {
         self.navigator = navigator
         self.photoService = photoService
         self.favouritesManager = favouritesManager
+        
+        setupFavouriteStatusSubscription()
     }
     
     // MARK: - Public Functions
@@ -37,20 +41,28 @@ final class FavouritesViewModel: ObservableObject {
         }
     }
     
-    func isFavourite(_ photoId: String) async -> Bool {
-        await favouritesManager.isFavourite(photoId)
-    }
-    
     func presentPhotoDetail(photo: Photo) {
         navigator.presentSheet(.photoDetail(photo: photo))
     }
     
     func removeFromFavourites(photo: Photo) async {
         await favouritesManager.removeFromFavourites(photo.id)
-        await loadFavourites()
     }
     
     // MARK: - Private Functions
+    private func setupFavouriteStatusSubscription() {
+        favouritesManager.favouriteStatusPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                guard let self else { return }
+                
+                Task {
+                    await self.loadFavourites()
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
     private func filterFavouritePhotos(with photos: [Photo]) async -> [Photo] {
         let favouriteIds = await favouritesManager.getAllFavouriteIds()
         return photos.filter { favouriteIds.contains($0.id) }

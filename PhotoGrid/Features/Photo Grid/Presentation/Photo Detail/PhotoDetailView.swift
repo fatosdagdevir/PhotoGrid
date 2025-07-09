@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct PhotoDetailView: View {
-    @ObservedObject var viewModel: PhotoDetailViewModel
+    @StateObject var viewModel: PhotoDetailViewModel
     
     var body: some View {
         NetworkImageView(
