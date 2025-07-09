@@ -10,10 +10,6 @@ struct FavouritesView: View {
     
     @ObservedObject var viewModel: FavouritesViewModel
     
-    let columns = [
-        GridItem(.adaptive(minimum: 100), spacing: 8)
-    ]
-    
     var body: some View {
         Group {
             switch viewModel.viewState {
@@ -22,7 +18,7 @@ struct FavouritesView: View {
             case .empty:
                 emptyView
             case .ready(let favPhotos):
-                photoGrid(with: favPhotos)
+                photoList(with: favPhotos)
             case .error:
                 Text("Opps!")
             }
@@ -50,21 +46,29 @@ struct FavouritesView: View {
     }
     
     @ViewBuilder
-    private func photoGrid(with photos: [Photo]) -> some View {
-        ScrollView {
-            LazyVGrid(columns: columns, spacing: 8) {
-                ForEach(photos) { photo in
-                    PhotoGridItemView(
-                        photo: photo,
-                        isFavourite: true,
-                        onTap: {
-                            viewModel.presentPhotoDetail(photo: photo)
-                        }
-                    )
+    private func photoList(with photos: [Photo]) -> some View {
+        List {
+            ForEach(photos) { photo in
+                PhotoListItemView(
+                    photo: photo,
+                    onTap: {
+                        viewModel.presentPhotoDetail(photo: photo)
+                    }
+                )
+                .listRowSeparator(.hidden)
+            }
+            .onDelete { indexSet in
+                for index in indexSet {
+                    let photo = photos[index]
+                    Task {
+                        await viewModel.removeFromFavourites(photo: photo)
+                    }
                 }
             }
-            .padding(8)
         }
+        .listStyle(.plain)
+        .navigationTitle("Favourite Photos")
+        .navigationBarTitleDisplayMode(.automatic)
     }
 }
 
@@ -75,7 +79,7 @@ struct FavouritesView_Previews: PreviewProvider {
         NavigationView {
             FavouritesView(
                 viewModel: previewFavouritesViewModel(
-                    state: .ready(photos: previewPhotos)
+                    state: .ready(photos: Photo.mockPhotos)
                 )
             )
         }

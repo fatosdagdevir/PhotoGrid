@@ -1,7 +1,6 @@
-import SwiftUI
 
-extension PreviewProvider {
-    static var previewPhotos: [Photo] {
+extension Photo {
+    static var mockPhotos: [Photo] {
         [
             Photo(id: "1", author: "John Doe", width: 300, height: 300, url: "https://picsum.photos/id/1/300/300", downloadUrl: "https://picsum.photos/id/1/300/300"),
             Photo(id: "2", author: "Jane Smith", width: 300, height: 300, url: "https://picsum.photos/id/2/300/300", downloadUrl: "https://picsum.photos/id/2/300/300"),

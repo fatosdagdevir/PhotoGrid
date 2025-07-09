@@ -15,7 +15,7 @@ struct PhotoGridItemView: View {
                         .aspectRatio(contentMode: .fill)
                 },
                 placeholder: {
-                    photoPlaceholder
+                    PlaceholderImageView()
                 }
             )
             .frame(minWidth: 100, minHeight: 100)
@@ -39,43 +39,18 @@ struct PhotoGridItemView: View {
                 .padding(8)
         }
     }
-    
-    @ViewBuilder
-    private var photoPlaceholder: some View {
-        RoundedRectangle(cornerRadius: 8)
-            .fill(.gray.opacity(0.3))
-            .overlay {
-                Image(systemName: "photo")
-                    .font(.title2)
-                    .foregroundStyle(.gray)
-            }
-    }
 }
 
 #Preview {
     VStack {
         PhotoGridItemView(
-            photo: .init(
-                id: "1",
-                author: "",
-                width: 300,
-                height: 200,
-                url: "",
-                downloadUrl: "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU"
-            ),
+            photo: .mockPhotos[0],
             isFavourite: false,
             onTap: {}
         )
         
         PhotoGridItemView(
-            photo: .init(
-                id: "1",
-                author: "",
-                width: 300,
-                height: 200,
-                url: "",
-                downloadUrl: "https://fastly.picsum.photos/id/0/5000/3333.jpg?hmac=_j6ghY5fCfSD6tvtcV74zXivkJSPIfR9B8w34XeQmvU"
-            ),
+            photo: .mockPhotos[0],
             isFavourite: true,
             onTap: {}
         )

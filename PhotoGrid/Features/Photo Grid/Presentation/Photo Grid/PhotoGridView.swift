@@ -36,19 +36,6 @@ struct PhotoGridView: View {
     }
     
     @ViewBuilder
-    private var emptyView: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "photo.on.rectangle.angled")
-                .font(.system(size: 30))
-                .foregroundStyle(.gray)
-            Text("No photos available")
-                .font(.body)
-                .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
-        }
-    }
-    
-    @ViewBuilder
     private func photoGrid(with photos: [Photo]) -> some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 8) {
@@ -65,6 +52,19 @@ struct PhotoGridView: View {
             .padding(8)
         }
     }
+    
+    @ViewBuilder
+    private var emptyView: some View {
+        VStack(spacing: 16) {
+            Image(systemName: "photo.on.rectangle.angled")
+                .font(.system(size: 30))
+                .foregroundStyle(.gray)
+            Text("No photos available")
+                .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+        }
+    }
 }
 
 struct PhotoGridView_Previews: PreviewProvider {
@@ -74,7 +74,7 @@ struct PhotoGridView_Previews: PreviewProvider {
         NavigationView {
             PhotoGridView(
                 viewModel: previewGridViewModel(
-                    state: .ready(photos: previewPhotos)
+                    state: .ready(photos: Photo.mockPhotos)
                 )
             )
         }

@@ -45,6 +45,11 @@ final class FavouritesViewModel: ObservableObject {
         navigator.presentSheet(.photoDetail(photo: photo))
     }
     
+    func removeFromFavourites(photo: Photo) async {
+        await favouritesManager.removeFromFavourites(photo.id)
+        await loadFavourites()
+    }
+    
     // MARK: - Private Functions
     private func filterFavouritePhotos(with photos: [Photo]) -> [Photo] {
         let favouriteIds = Set(favouritesManager.getAllFavouriteIds())

@@ -6,7 +6,7 @@ extension PreviewProvider {
         return PhotoDetailViewModel(
             navigator: Navigator(),
             favouritesManager: MockFavouritesManager(),
-            photo: previewPhotos[0]
+            photo: .mockPhotos[0]
         )
     }
 }

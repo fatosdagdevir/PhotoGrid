@@ -28,7 +28,7 @@
 		BBDE9D012E1C3E8E00FABEC1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D002E1C3E8E00FABEC1 /* Photo.swift */; };
 		BBDE9D062E1C5AEB00FABEC1 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D052E1C5AEB00FABEC1 /* NetworkImageView.swift */; };
 		BBDE9D0B2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D0A2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift */; };
-		BBDE9D0D2E1C604700FABEC1 /* PreviewProvider+Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D0C2E1C604700FABEC1 /* PreviewProvider+Photo.swift */; };
+		BBDE9D0D2E1C604700FABEC1 /* Photo+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D0C2E1C604700FABEC1 /* Photo+Mock.swift */; };
 		BBDE9D0F2E1C6C5B00FABEC1 /* PhotoGridItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D0E2E1C6C5B00FABEC1 /* PhotoGridItemView.swift */; };
 		BBDE9D142E1D2CEB00FABEC1 /* PhotoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D132E1D2CEB00FABEC1 /* PhotoDetailView.swift */; };
 		BBDE9D172E1D982500FABEC1 /* FavouritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D152E1D982500FABEC1 /* FavouritesManager.swift */; };
@@ -38,6 +38,8 @@
 		BBDE9D212E1DB62000FABEC1 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D202E1DB61000FABEC1 /* PhotoService.swift */; };
 		BBDE9D212E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D202E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift */; };
 		BBDE9D282E1EABFB00FABEC1 /* MockFavouritesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */; };
+		BBDE9D2A2E1EB1B400FABEC1 /* PhotoListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D292E1EB1B400FABEC1 /* PhotoListItemView.swift */; };
+		BBDE9D2F2E1EB79500FABEC1 /* PlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D2E2E1EB79500FABEC1 /* PlaceholderImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +82,7 @@
 		BBDE9D002E1C3E8E00FABEC1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BBDE9D052E1C5AEB00FABEC1 /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
 		BBDE9D0A2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+PhotoGridViewModel.swift"; sourceTree = "<group>"; };
-		BBDE9D0C2E1C604700FABEC1 /* PreviewProvider+Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+Photo.swift"; sourceTree = "<group>"; };
+		BBDE9D0C2E1C604700FABEC1 /* Photo+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Photo+Mock.swift"; sourceTree = "<group>"; };
 		BBDE9D0E2E1C6C5B00FABEC1 /* PhotoGridItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridItemView.swift; sourceTree = "<group>"; };
 		BBDE9D132E1D2CEB00FABEC1 /* PhotoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailView.swift; sourceTree = "<group>"; };
 		BBDE9D152E1D982500FABEC1 /* FavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManager.swift; sourceTree = "<group>"; };
@@ -90,6 +92,8 @@
 		BBDE9D202E1DB61000FABEC1 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		BBDE9D202E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+FavouritesViewModel.swift"; sourceTree = "<group>"; };
 		BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavouritesManager.swift; sourceTree = "<group>"; };
+		BBDE9D292E1EB1B400FABEC1 /* PhotoListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListItemView.swift; sourceTree = "<group>"; };
+		BBDE9D2E2E1EB79500FABEC1 /* PlaceholderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,7 +238,9 @@
 		BBDE9CE52E1C14AA00FABEC1 /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				BBDE9D2B2E1EB30600FABEC1 /* Presentation */,
 				BBDE9CE82E1C16F800FABEC1 /* FavouritesCoordinator.swift */,
+				BBDE9D292E1EB1B400FABEC1 /* PhotoListItemView.swift */,
 				BBDE9CE62E1C14DE00FABEC1 /* FavouritesView.swift */,
 				BBDE9CEA2E1C170600FABEC1 /* FavouritesViewModel.swift */,
 			);
@@ -299,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDE9D052E1C5AEB00FABEC1 /* NetworkImageView.swift */,
+				BBDE9D2E2E1EB79500FABEC1 /* PlaceholderImageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -309,7 +316,6 @@
 				BBDE9D0A2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift */,
 				BBDE9D1E2E1DB56800FABEC1 /* PreviewProvider+PhotoDetailViewModel.swift */,
 				BBDE9D202E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift */,
-				BBDE9D0C2E1C604700FABEC1 /* PreviewProvider+Photo.swift */,
 			);
 			path = "Preview Helpers";
 			sourceTree = "<group>";
@@ -336,9 +342,17 @@
 		BBDE9D262E1EABF300FABEC1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				BBDE9D0C2E1C604700FABEC1 /* Photo+Mock.swift */,
 				BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		BBDE9D2B2E1EB30600FABEC1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +506,7 @@
 				BBDE9D282E1EABFB00FABEC1 /* MockFavouritesManager.swift in Sources */,
 				BBDE9D1A2E1D9CF300FABEC1 /* FavouritePhoto.swift in Sources */,
 				BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */,
+				BBDE9D2A2E1EB1B400FABEC1 /* PhotoListItemView.swift in Sources */,
 				BBDE9D0B2E1C5F8300FABEC1 /* PreviewProvider+PhotoGridViewModel.swift in Sources */,
 				BBDE9D0F2E1C6C5B00FABEC1 /* PhotoGridItemView.swift in Sources */,
 				BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */,
@@ -500,7 +515,8 @@
 				BBDE9CE02E1C12EB00FABEC1 /* PhotoGridCoordinator.swift in Sources */,
 				BBDE9CE72E1C14DE00FABEC1 /* FavouritesView.swift in Sources */,
 				BBDE9D212E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift in Sources */,
-				BBDE9D0D2E1C604700FABEC1 /* PreviewProvider+Photo.swift in Sources */,
+				BBDE9D2F2E1EB79500FABEC1 /* PlaceholderImageView.swift in Sources */,
+				BBDE9D0D2E1C604700FABEC1 /* Photo+Mock.swift in Sources */,
 				BBDE9D1F2E1DB56800FABEC1 /* PreviewProvider+PhotoDetailViewModel.swift in Sources */,
 				BBDE9CFE2E1C3E5000FABEC1 /* PhotoDTO.swift in Sources */,
 				BBDE9D1C2E1DACC200FABEC1 /* PhotoDetailViewModel.swift in Sources */,
