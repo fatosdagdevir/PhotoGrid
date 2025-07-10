@@ -10,7 +10,6 @@
 		BBDE9CCA2E1C11FF00FABEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDE9CC62E1C11FF00FABEC1 /* Assets.xcassets */; };
 		BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */; };
 		BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */; };
-		BBDE9CCF2E1C120200FABEC1 /* PhotoGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CCD2E1C120200FABEC1 /* PhotoGridTests.swift */; };
 		BBDE9CD32E1C120500FABEC1 /* PhotoGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CD02E1C120500FABEC1 /* PhotoGridUITests.swift */; };
 		BBDE9CD42E1C120500FABEC1 /* PhotoGridUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CD12E1C120500FABEC1 /* PhotoGridUITestsLaunchTests.swift */; };
 		BBDE9CDC2E1C12A900FABEC1 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CDB2E1C12A900FABEC1 /* Navigator.swift */; };
@@ -47,6 +46,11 @@
 		BBDE9D3C2E1FD24700FABEC1 /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D392E1FD24700FABEC1 /* ImageCacher.swift */; };
 		BBDE9D402E1FE35200FABEC1 /* View+onFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D3F2E1FE35200FABEC1 /* View+onFirstAppear.swift */; };
 		BBDE9D422E1FE80900FABEC1 /* MockPhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D412E1FE80900FABEC1 /* MockPhotoProvider.swift */; };
+		BBDE9D442E1FEBDE00FABEC1 /* NavigatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D432E1FEBDE00FABEC1 /* NavigatorTests.swift */; };
+		BBDE9D4D2E20263C00FABEC1 /* empty_gallery.json in Resources */ = {isa = PBXBuildFile; fileRef = BBDE9D482E20263C00FABEC1 /* empty_gallery.json */; };
+		BBDE9D502E20263C00FABEC1 /* photo_gallery.json in Resources */ = {isa = PBXBuildFile; fileRef = BBDE9D492E20263C00FABEC1 /* photo_gallery.json */; };
+		BBDE9D522E20265200FABEC1 /* PhotoProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D512E20265200FABEC1 /* PhotoProviderTests.swift */; };
+		BBDE9D552E2026BB00FABEC1 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D542E2026BB00FABEC1 /* MockNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +77,6 @@
 		BBDE9CC62E1C11FF00FABEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridView.swift; sourceTree = "<group>"; };
 		BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridApp.swift; sourceTree = "<group>"; };
-		BBDE9CCD2E1C120200FABEC1 /* PhotoGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridTests.swift; sourceTree = "<group>"; };
 		BBDE9CD02E1C120500FABEC1 /* PhotoGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridUITests.swift; sourceTree = "<group>"; };
 		BBDE9CD12E1C120500FABEC1 /* PhotoGridUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BBDE9CDB2E1C12A900FABEC1 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
@@ -108,6 +111,11 @@
 		BBDE9D392E1FD24700FABEC1 /* ImageCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
 		BBDE9D3F2E1FE35200FABEC1 /* View+onFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+onFirstAppear.swift"; sourceTree = "<group>"; };
 		BBDE9D412E1FE80900FABEC1 /* MockPhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoProvider.swift; sourceTree = "<group>"; };
+		BBDE9D432E1FEBDE00FABEC1 /* NavigatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorTests.swift; sourceTree = "<group>"; };
+		BBDE9D482E20263C00FABEC1 /* empty_gallery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = empty_gallery.json; sourceTree = "<group>"; };
+		BBDE9D492E20263C00FABEC1 /* photo_gallery.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photo_gallery.json; sourceTree = "<group>"; };
+		BBDE9D512E20265200FABEC1 /* PhotoProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProviderTests.swift; sourceTree = "<group>"; };
+		BBDE9D542E2026BB00FABEC1 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +180,8 @@
 		BBDE9CCE2E1C120200FABEC1 /* PhotoGridTests */ = {
 			isa = PBXGroup;
 			children = (
-				BBDE9CCD2E1C120200FABEC1 /* PhotoGridTests.swift */,
+				BBDE9D452E20239F00FABEC1 /* Core */,
+				BBDE9D4C2E20263C00FABEC1 /* Resources */,
 			);
 			path = PhotoGridTests;
 			sourceTree = "<group>";
@@ -384,6 +393,49 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		BBDE9D452E20239F00FABEC1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9D472E2023C400FABEC1 /* Providers */,
+				BBDE9D462E2023A400FABEC1 /* Navigator */,
+				BBDE9D532E2026AF00FABEC1 /* Mocks */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BBDE9D462E2023A400FABEC1 /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9D432E1FEBDE00FABEC1 /* NavigatorTests.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+		BBDE9D472E2023C400FABEC1 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9D512E20265200FABEC1 /* PhotoProviderTests.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		BBDE9D4C2E20263C00FABEC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9D482E20263C00FABEC1 /* empty_gallery.json */,
+				BBDE9D492E20263C00FABEC1 /* photo_gallery.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BBDE9D532E2026AF00FABEC1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9D542E2026BB00FABEC1 /* MockNetwork.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -508,6 +560,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBDE9D4D2E20263C00FABEC1 /* empty_gallery.json in Resources */,
+				BBDE9D502E20263C00FABEC1 /* photo_gallery.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +620,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDE9CCF2E1C120200FABEC1 /* PhotoGridTests.swift in Sources */,
+				BBDE9D552E2026BB00FABEC1 /* MockNetwork.swift in Sources */,
+				BBDE9D442E1FEBDE00FABEC1 /* NavigatorTests.swift in Sources */,
+				BBDE9D522E20265200FABEC1 /* PhotoProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +787,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -759,6 +816,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,7 +838,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27YU34ECNS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGridTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -799,7 +857,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27YU34ECNS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fatmadagdevir.PhotoGridTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

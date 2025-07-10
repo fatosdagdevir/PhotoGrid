@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "author": "Test Author 1",
+    "width": 1000,
+    "height": 800,
+    "url": "https://example.com/photo1",
+    "download_url": "https://example.com/download1"
+  },
+  {
+    "id": "2",
+    "author": "Test Author 2",
+    "width": 1200,
+    "height": 900,
+    "url": "https://example.com/photo2",
+    "download_url": "https://example.com/download2"
+  },
+  {
+    "id": "3",
+    "author": "Test Author 3",
+    "width": 800,
+    "height": 600,
+    "url": "https://example.com/photo3",
+    "download_url": "https://example.com/download3"
+  }
+] 

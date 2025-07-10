@@ -10,6 +10,9 @@ struct Photo: Identifiable, Hashable {
     
     var smallImageURL: URL? {
         let targetWidth: CGFloat = 300
+        guard width > 0 else {
+            return URL(string: downloadUrl)
+        }
         let scale = targetWidth / CGFloat(width)
         let targetHeight = CGFloat(height) * scale
         return URL(string: "https://picsum.photos/id/\(id)/\(Int(targetWidth))/\(Int(targetHeight))")
@@ -17,6 +20,9 @@ struct Photo: Identifiable, Hashable {
     
     var bigImageURL: URL? {
         let targetWidth: CGFloat = 1500
+        guard width > 0 else {
+            return URL(string: downloadUrl)
+        }
         let scale = targetWidth / CGFloat(width)
         let targetHeight = CGFloat(height) * scale
         return URL(string: "https://picsum.photos/id/\(id)/\(Int(targetWidth))/\(Int(targetHeight))")
