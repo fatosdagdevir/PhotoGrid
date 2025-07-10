@@ -24,7 +24,7 @@ struct FavouritesView: View {
                 ErrorView(viewModel: viewModel)
             }
         }
-        .task {
+        .onFirstAppear {
             await viewModel.loadFavourites()
         }
     }

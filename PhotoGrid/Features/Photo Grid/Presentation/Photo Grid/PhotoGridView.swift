@@ -9,7 +9,6 @@ struct PhotoGridView: View {
     }
     
     @ObservedObject var viewModel: PhotoGridViewModel
-    @State private var hasLoaded = false
     
     let columns = [
         GridItem(.adaptive(minimum: 100), spacing: 8)
@@ -29,10 +28,8 @@ struct PhotoGridView: View {
                 ErrorView(viewModel: viewModel)
             }
         }
-        .task {
-            guard !hasLoaded else { return }
+        .onFirstAppear {
             await viewModel.fetchPhotoGrid()
-            hasLoaded = true
         }
     }
     
