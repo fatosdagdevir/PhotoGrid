@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */; };
 		BBDE9CCA2E1C11FF00FABEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDE9CC62E1C11FF00FABEC1 /* Assets.xcassets */; };
 		BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */; };
 		BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManagerTests.swift; sourceTree = "<group>"; };
 		BBDE9C9C2E1C119F00FABEC1 /* PhotoGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CA92E1C11A200FABEC1 /* PhotoGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CB32E1C11A200FABEC1 /* PhotoGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BBBB05332E206407000C53A7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		BBDE9C932E1C119F00FABEC1 = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +406,7 @@
 		BBDE9D452E20239F00FABEC1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BBBB05332E206407000C53A7 /* Domain */,
 				BBDE9D472E2023C400FABEC1 /* Providers */,
 				BBDE9D462E2023A400FABEC1 /* Navigator */,
 				BBDE9D532E2026AF00FABEC1 /* Mocks */,
@@ -621,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDE9D552E2026BB00FABEC1 /* MockNetwork.swift in Sources */,
+				BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */,
 				BBDE9D442E1FEBDE00FABEC1 /* NavigatorTests.swift in Sources */,
 				BBDE9D522E20265200FABEC1 /* PhotoProviderTests.swift in Sources */,
 			);
