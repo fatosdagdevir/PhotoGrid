@@ -43,6 +43,8 @@
 		BBDE9D312E1F0A4600FABEC1 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D302E1F0A4600FABEC1 /* ErrorView.swift */; };
 		BBDE9D332E1F0A6600FABEC1 /* ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D322E1F0A6600FABEC1 /* ErrorViewModel.swift */; };
 		BBDE9D352E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D342E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift */; };
+		BBDE9D3B2E1FD24700FABEC1 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D382E1FD24700FABEC1 /* ImageLoader.swift */; };
+		BBDE9D3C2E1FD24700FABEC1 /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D392E1FD24700FABEC1 /* ImageCacher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,8 @@
 		BBDE9D302E1F0A4600FABEC1 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		BBDE9D322E1F0A6600FABEC1 /* ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewModel.swift; sourceTree = "<group>"; };
 		BBDE9D342E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PreviewProvider+ErrorViewModel.swift"; sourceTree = "<group>"; };
+		BBDE9D382E1FD24700FABEC1 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		BBDE9D392E1FD24700FABEC1 /* ImageCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,7 @@
 				BBDE9CF62E1C3BD100FABEC1 /* Providers */,
 				BBDE9CF32E1C3B8C00FABEC1 /* Domain */,
 				BBDE9CDA2E1C129A00FABEC1 /* Navigating */,
+				BBDE9D3A2E1FD24700FABEC1 /* Utils */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -362,6 +367,15 @@
 			children = (
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BBDE9D3A2E1FD24700FABEC1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BBDE9D382E1FD24700FABEC1 /* ImageLoader.swift */,
+				BBDE9D392E1FD24700FABEC1 /* ImageCacher.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -529,6 +543,8 @@
 				BBDE9D212E1E633C00FABEC1 /* PreviewProvider+FavouritesViewModel.swift in Sources */,
 				BBDE9D2F2E1EB79500FABEC1 /* PlaceholderImageView.swift in Sources */,
 				BBDE9D0D2E1C604700FABEC1 /* Photo+Mock.swift in Sources */,
+				BBDE9D3B2E1FD24700FABEC1 /* ImageLoader.swift in Sources */,
+				BBDE9D3C2E1FD24700FABEC1 /* ImageCacher.swift in Sources */,
 				BBDE9D1F2E1DB56800FABEC1 /* PreviewProvider+PhotoDetailViewModel.swift in Sources */,
 				BBDE9CFE2E1C3E5000FABEC1 /* PhotoDTO.swift in Sources */,
 				BBDE9D1C2E1DACC200FABEC1 /* PhotoDetailViewModel.swift in Sources */,

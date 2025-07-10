@@ -6,6 +6,8 @@ struct NetworkImageView<Content: View, Placeholder: View>: View {
     @ViewBuilder private let content: (Image) -> Content
     @ViewBuilder private let placeholder: () -> Placeholder
 
+    @StateObject private var imageLoader = ImageLoader()
+    
     init(
         url: URL?,
         @ViewBuilder content: @escaping (Image) -> Content,
@@ -17,15 +19,15 @@ struct NetworkImageView<Content: View, Placeholder: View>: View {
     }
 
     var body: some View {
-        AsyncImage(url: url) { phase in
-            switch phase {
-            case .success(let image):
-                content(image)
-            case .empty, .failure:
-                placeholder()
-            @unknown default:
+        Group {
+            if let image = imageLoader.image {
+                content(Image(uiImage: image))
+            } else {
                 placeholder()
             }
+        }
+        .task {
+            await imageLoader.loadImage(from: url)
         }
     }
 }
