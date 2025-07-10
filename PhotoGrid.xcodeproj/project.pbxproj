@@ -46,6 +46,7 @@
 		BBDE9D3B2E1FD24700FABEC1 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D382E1FD24700FABEC1 /* ImageLoader.swift */; };
 		BBDE9D3C2E1FD24700FABEC1 /* ImageCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D392E1FD24700FABEC1 /* ImageCacher.swift */; };
 		BBDE9D402E1FE35200FABEC1 /* View+onFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D3F2E1FE35200FABEC1 /* View+onFirstAppear.swift */; };
+		BBDE9D422E1FE80900FABEC1 /* MockPhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D412E1FE80900FABEC1 /* MockPhotoProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		BBDE9D382E1FD24700FABEC1 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		BBDE9D392E1FD24700FABEC1 /* ImageCacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacher.swift; sourceTree = "<group>"; };
 		BBDE9D3F2E1FE35200FABEC1 /* View+onFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+onFirstAppear.swift"; sourceTree = "<group>"; };
+		BBDE9D412E1FE80900FABEC1 /* MockPhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDE9D0C2E1C604700FABEC1 /* Photo+Mock.swift */,
+				BBDE9D412E1FE80900FABEC1 /* MockPhotoProvider.swift */,
 				BBDE9D272E1EABFB00FABEC1 /* MockFavouritesManager.swift */,
 			);
 			path = Mocks;
@@ -541,6 +544,7 @@
 				BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */,
 				BBDE9D062E1C5AEB00FABEC1 /* NetworkImageView.swift in Sources */,
 				BBDE9CFB2E1C3CC900FABEC1 /* AppConstants.swift in Sources */,
+				BBDE9D422E1FE80900FABEC1 /* MockPhotoProvider.swift in Sources */,
 				BBDE9CE02E1C12EB00FABEC1 /* PhotoGridCoordinator.swift in Sources */,
 				BBDE9D352E1F0E0C00FABEC1 /* PreviewProvider+ErrorViewModel.swift in Sources */,
 				BBDE9CE72E1C14DE00FABEC1 /* FavouritesView.swift in Sources */,

@@ -89,7 +89,7 @@ struct PhotoGridView_Previews: PreviewProvider {
         }
         .previewDisplayName("Loading")
         
-        // MARK: Loading
+        // MARK: Empty
         NavigationView {
             PhotoGridView(
                 viewModel: previewGridViewModel(state: .empty)
