@@ -7,7 +7,7 @@ struct PhotoListItemView: View {
     var body: some View {
         HStack(spacing: 12) {
             NetworkImageView(
-                url: photo.thumbnailURL,
+                url: photo.smallImageURL,
                 content: { image in
                     image
                         .resizable()

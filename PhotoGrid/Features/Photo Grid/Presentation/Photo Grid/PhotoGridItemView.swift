@@ -8,7 +8,7 @@ struct PhotoGridItemView: View {
     var body: some View {
         ZStack(alignment: .topTrailing) {
             NetworkImageView(
-                url: photo.thumbnailURL,
+                url: photo.smallImageURL,
                 content: { image in
                     image
                         .resizable()

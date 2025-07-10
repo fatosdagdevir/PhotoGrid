@@ -5,7 +5,7 @@ struct PhotoDetailView: View {
     
     var body: some View {
         NetworkImageView(
-            url: URL(string: viewModel.photo.downloadUrl),
+            url: viewModel.photo.bigImageURL,
             content: { image in
                 image
                     .resizable()
