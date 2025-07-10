@@ -24,9 +24,17 @@ struct PhotoGridItemView: View {
             .onTapGesture {
                 onTap()
             }
+            .accessibilityLabel(accessibilityLabel)
+            .accessibilityHint("Double tap to view photo details")
+            .accessibilityAddTraits(.isButton)
             
             favouriteIndicator
         }
+    }
+    
+    private var accessibilityLabel: String {
+        let baseLabel = "Photo by \(photo.author)"
+        return isFavourite ? "\(baseLabel), marked as favourite" : baseLabel
     }
     
     @ViewBuilder
@@ -37,6 +45,7 @@ struct PhotoGridItemView: View {
                 .foregroundStyle(.red)
                 .shadow(radius: 2)
                 .padding(8)
+                .accessibilityHidden(true)
         }
     }
 }

@@ -20,6 +20,7 @@ struct PhotoGridView: View {
             switch viewModel.viewState {
             case .loading:
                 ProgressView()
+                    .accessibilityLabel("Loading photos")
             case .ready(let photos):
                 photoGrid(with: photos)
             case .empty:
@@ -51,6 +52,8 @@ struct PhotoGridView: View {
             }
             .padding(8)
         }
+        .accessibilityLabel("Photo grid with \(photos.count) photos")
+        .accessibilityHint("Scroll to browse photos, double tap on a photo to view details")
     }
     
     @ViewBuilder
@@ -64,6 +67,7 @@ struct PhotoGridView: View {
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
         }
+        .accessibilityLabel("No photos available")
     }
 }
 

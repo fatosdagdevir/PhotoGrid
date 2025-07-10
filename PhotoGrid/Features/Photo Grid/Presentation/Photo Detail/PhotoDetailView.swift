@@ -15,6 +15,7 @@ struct PhotoDetailView: View {
                 ProgressView()
             }
         )
+        .accessibilityLabel("Photo by \(viewModel.photo.author)")
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 favouriteButton
@@ -36,6 +37,8 @@ struct PhotoDetailView: View {
                 .frame(width: 30)
                 .foregroundColor(.gray)
         }
+        .accessibilityLabel("Close photo")
+        .accessibilityHint("Double tap to close")
     }
     
     private var favouriteButton: some View {
@@ -47,6 +50,12 @@ struct PhotoDetailView: View {
             Image(systemName: viewModel.isFavourite ? "heart.fill" : "heart")
                 .foregroundStyle(viewModel.isFavourite ? .red : .gray)
         }
+        .accessibilityLabel(favouriteButtonLabel)
+        .accessibilityHint("Double tap to \(viewModel.isFavourite ? "remove from" : "add to") favourites")
+    }
+    
+    private var favouriteButtonLabel: String {
+        viewModel.isFavourite ? "Remove from favourites" : "Add to favourites"
     }
 }
 

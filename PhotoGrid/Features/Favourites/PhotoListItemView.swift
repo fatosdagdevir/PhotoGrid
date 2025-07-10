@@ -32,6 +32,9 @@ struct PhotoListItemView: View {
         .onTapGesture {
             onTap()
         }
+        .accessibilityLabel("Photo by \(photo.author)")
+        .accessibilityHint("Double tap to view photo details, swipe left to remove from favourites")
+        .accessibilityAddTraits(.isButton)
     }
 }
 

@@ -15,6 +15,7 @@ struct FavouritesView: View {
             switch viewModel.viewState {
             case .loading:
                 ProgressView()
+                    .accessibilityLabel("Loading favourite photos")
             case .empty:
                 emptyView
             case .ready(let favPhotos):
@@ -43,6 +44,8 @@ struct FavouritesView: View {
         }
         .padding()
         .navigationBarTitleDisplayMode(.automatic)
+        .accessibilityLabel("No favourite photos")
+        .accessibilityHint("Photos you mark as favourite will appear here")
     }
     
     @ViewBuilder
@@ -69,6 +72,8 @@ struct FavouritesView: View {
         .listStyle(.plain)
         .navigationTitle("Favourite Photos")
         .navigationBarTitleDisplayMode(.automatic)
+        .accessibilityLabel("Favourite photos list with \(photos.count) photos")
+        .accessibilityHint("Swipe left on a photo to remove it from favourites")
     }
 }
 
