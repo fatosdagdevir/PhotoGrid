@@ -1,11 +1,26 @@
 import SwiftUI
 
 struct FavouritesView: View {
-    enum ViewState {
+    enum ViewState: Equatable {
         case loading
         case ready(photos: [Photo])
         case empty
         case error(viewModel: ErrorViewModel)
+        
+        static func == (lhs: ViewState, rhs: ViewState) -> Bool {
+            switch (lhs, rhs) {
+            case (.loading, .loading):
+                return true
+            case (.ready(let lhsPhotos), .ready(let rhsPhotos)):
+                return lhsPhotos == rhsPhotos
+            case (.empty, .empty):
+                return true
+            case (.error(let lhsViewModel), .error(let rhsViewModel)):
+                return lhsViewModel.error.localizedDescription == rhsViewModel.error.localizedDescription
+            default:
+                return false
+            }
+        }
     }
     
     @ObservedObject var viewModel: FavouritesViewModel

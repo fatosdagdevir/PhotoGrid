@@ -58,6 +58,7 @@
 		BBDE9D522E20265200FABEC1 /* PhotoProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D512E20265200FABEC1 /* PhotoProviderTests.swift */; };
 		BBDE9D552E2026BB00FABEC1 /* MockNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9D542E2026BB00FABEC1 /* MockNetwork.swift */; };
 		BBF815442E210B1A0019C1A6 /* PhotoDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF815432E210B190019C1A6 /* PhotoDetailViewModelTests.swift */; };
+		BBF815472E21108B0019C1A6 /* FavouritesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF815462E21108B0019C1A6 /* FavouritesViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		BBDE9D512E20265200FABEC1 /* PhotoProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoProviderTests.swift; sourceTree = "<group>"; };
 		BBDE9D542E2026BB00FABEC1 /* MockNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetwork.swift; sourceTree = "<group>"; };
 		BBF815432E210B190019C1A6 /* PhotoDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewModelTests.swift; sourceTree = "<group>"; };
+		BBF815462E21108B0019C1A6 /* FavouritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				BBBB053A2E210000000C53A7 /* PhotoGridViewModelTests.swift */,
 				BBF815432E210B190019C1A6 /* PhotoDetailViewModelTests.swift */,
+				BBF815462E21108B0019C1A6 /* FavouritesViewModelTests.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -666,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF815442E210B1A0019C1A6 /* PhotoDetailViewModelTests.swift in Sources */,
+				BBF815472E21108B0019C1A6 /* FavouritesViewModelTests.swift in Sources */,
 				BBBB053F2E21010E000C53A7 /* MockPhotoService.swift in Sources */,
 				BBDE9D552E2026BB00FABEC1 /* MockNetwork.swift in Sources */,
 				BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */,
