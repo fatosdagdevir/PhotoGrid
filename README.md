@@ -101,15 +101,13 @@ PhotoGridTests/
 ## Requirements 📋
 
 - **iOS**: 17.6+
-- **Xcode**: 15.0+
-- **Swift**: 6.0+
-- **SwiftUI**: Latest
-- **SwiftData**: For local persistence
+- **Xcode**: 16.0+
+- **Swift**: 5.0+
 
 ## Installation 🚀
 
 ### Prerequisites
-1. Install Xcode 15.0 or later
+1. Install Xcode 16.0 or later
 2. Ensure you have iOS 17.6+ simulator or device
 
 ### Setup
