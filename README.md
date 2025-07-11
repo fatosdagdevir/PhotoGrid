@@ -77,8 +77,7 @@ Networking/
 - **Protocol-oriented**: Easy mocking and testing
 - **Async/await**: Modern Swift concurrency
 - **Type-safe**: Compile-time request/response safety
-- **Error handling**: Comprehensive error management
-- **Customizable**: Configurable timeouts and encoders
+- **Error handling**: Error management
 
 ## Testing 🧪
 
