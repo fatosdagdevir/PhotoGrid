@@ -124,29 +124,36 @@ final class PhotoGridViewModelTests: XCTestCase {
     func test_favouriteStatusSubscription_updatesStatusOnChanges() async {
         // Given
         let photoId = "subscription-test-photo"
-        var publishedPhotoIds: [String] = []
+        sut.favouriteStatuses[photoId] = false
         
-        mockFavouritesManager.favouriteStatusPublisher
-            .sink { photoId in
-                publishedPhotoIds.append(photoId)
+        let addExpectation = XCTestExpectation(description: "Photo added to favourites")
+        let removeExpectation = XCTestExpectation(description: "Photo removed from favourites")
+        
+        // Monitor the ViewModel's state changes
+        let cancellable = sut.$favouriteStatuses
+            .dropFirst() // Skip initial value
+            .sink { statuses in
+                if statuses[photoId] == true {
+                    addExpectation.fulfill()
+                } else if statuses[photoId] == false {
+                    removeExpectation.fulfill()
+                }
             }
-            .store(in: &cancellables)
+        
+        defer { cancellable.cancel() }
         
         // When - Add to favourites
         await mockFavouritesManager.addToFavourites(photoId)
-        try? await Task.sleep(nanoseconds: 100_000_000) // 0.1 seconds
+        await fulfillment(of: [addExpectation], timeout: 1.0)
         
         // Then
-        XCTAssertEqual(publishedPhotoIds.count, 1)
-        XCTAssertEqual(publishedPhotoIds.first, photoId)
         XCTAssertTrue(sut.isFavourite(photoId))
         
         // When - Remove from favourites
         await mockFavouritesManager.removeFromFavourites(photoId)
-        try? await Task.sleep(nanoseconds: 100_000_000) // 0.1 seconds
+        await fulfillment(of: [removeExpectation], timeout: 1.0)
         
         // Then
-        XCTAssertEqual(publishedPhotoIds.count, 2)
         XCTAssertFalse(sut.isFavourite(photoId))
     }
     
