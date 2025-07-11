@@ -5,10 +5,8 @@ A modern iOS photo gallery app built with SwiftUI, featuring a clean architectur
 ## Features ✨
 
 - **Photo Grid**: Browse photos from Picsum Photos API in a responsive grid layout
-- **Photo Details**: View high-resolution photos with full-screen experience
+- **Photo Details**: High-resolution photos with full-screen experience
 - **Favourites**: Save and manage your favourite photos with local persistence
-- **Offline Support**: Graceful handling of network connectivity issues
-- **Accessibility**: Full VoiceOver support and accessibility features
 
 ## Architecture 🏗️
 
@@ -48,7 +46,7 @@ PhotoGrid/
 
 ### Architecture
 - **MVVMC**: Model-View-ViewModel-Coordinator architecture
-- **Clean Architecture**: Separation of concerns with clear layers
+- **Clean Architecture**: Separation of concerns with clean layers
 - **Protocol-Oriented Design**: Dependency injection and testability
 - **Repository Pattern**: Data access abstraction - PhotoProvider
 
@@ -136,38 +134,8 @@ PhotoGridTests/
 - **SwiftData**: Built-in iOS framework
 - **SwiftUI**: Built-in iOS framework
 
-## Usage 📱
 
-### Photo Grid
-- Browse photos in a responsive grid layout
-- Tap any photo to view details
-- Photos are automatically cached for performance
-- Pull to refresh for new photos
-
-### Photo Details
-- Full-screen photo viewing
-- Tap heart icon to add/remove from favourites
-- Tap X to dismiss and return to grid
-
-### Favourites
-- View all your saved photos
-- Swipe left to remove from favourites
-- Tap any photo to view details
-- Persistent storage with SwiftData
-
-## Development 🛠️
-
-### Running Tests
-```bash
-# Run all tests
-xcodebuild test -scheme PhotoGrid -destination 'platform=iOS Simulator,name=iPhone 16'
-
-# Run specific test target
-xcodebuild test -scheme PhotoGrid -only-testing:PhotoGridTests
-```
-
-
-### Key Components
+### Key Components 🛠️
 
 #### Presentation Layer
 - **PhotoGridCoordinator**: Navigation and flow coordination
@@ -192,62 +160,6 @@ xcodebuild test -scheme PhotoGrid -only-testing:PhotoGridTests
 - **Parameters**: `limit=100`
 - **Response**: Array of photo objects
 
-### Photo Object Structure
-```swift
-struct Photo: Identifiable, Hashable {
-    let id: String
-    let author: String
-    let width: Int
-    let height: Int
-    let url: String
-    let downloadUrl: String
-    
-    var smallImageURL: URL?    // 300px width
-    var bigImageURL: URL?      // 1500px width
-}
-```
-
-## Performance 🚀
-
-### Optimizations
-- **Lazy Loading**: Images loaded on-demand
-- **Caching**: Network and image caching
-- **Memory Management**: Efficient image handling
-- **Background Processing**: Non-blocking operations
-
-### Image Loading
-- **NetworkImageView**: Custom image loading component
-- **Placeholder**: Loading states and error handling
-- **Caching**: NSCache-based image caching
-- **Cancellation**: Proper task cancellation
-
-## Accessibility ♿
-
-### Features
-- **VoiceOver**: Complete screen reader support
-- **Dynamic Type**: Scalable text sizes
-- **High Contrast**: Enhanced visibility
-- **Reduced Motion**: Respects user preferences
-
-### Implementation
-- **Accessibility Labels**: Descriptive text for UI elements
-- **Accessibility Hints**: Action guidance
-- **Accessibility Traits**: Proper element classification
-- **Semantic Views**: Meaningful view hierarchy
-
-## Error Handling ⚠️
-
-### Network Errors
-- **Offline Detection**: Automatic offline state handling
-- **Retry Logic**: Automatic retry with exponential backoff
-- **User Feedback**: Clear error messages and actions
-- **Graceful Degradation**: App remains functional
-
-### Error Types
-- **NetworkError**: Comprehensive network error handling
-- **DecodingError**: JSON parsing error management
-- **ValidationError**: Data validation errors
-- **PersistenceError**: Local storage errors
 
 ## Future Improvements 🚀
 - **Architecture Review**: Evaluate MVVM-C adaptation for SwiftUI - navigation is tightly coupled with views in SwiftUI, requiring careful consideration of coordinator pattern implementation and potential alternatives like NavigationStack-based routing
