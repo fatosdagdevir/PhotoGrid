@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */; };
+		BBBB05362E206A19000C53A7 /* PhotoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05352E206A19000C53A7 /* PhotoServiceTests.swift */; };
+		BBBB05382E206A4F000C53A7 /* MockPhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */; };
 		BBDE9CCA2E1C11FF00FABEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDE9CC62E1C11FF00FABEC1 /* Assets.xcassets */; };
 		BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */; };
 		BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */; };
@@ -73,6 +75,8 @@
 
 /* Begin PBXFileReference section */
 		BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManagerTests.swift; sourceTree = "<group>"; };
+		BBBB05352E206A19000C53A7 /* PhotoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServiceTests.swift; sourceTree = "<group>"; };
+		BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoProvider.swift; sourceTree = "<group>"; };
 		BBDE9C9C2E1C119F00FABEC1 /* PhotoGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CA92E1C11A200FABEC1 /* PhotoGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CB32E1C11A200FABEC1 /* PhotoGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */,
+				BBBB05352E206A19000C53A7 /* PhotoServiceTests.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 			isa = PBXGroup;
 			children = (
 				BBDE9D542E2026BB00FABEC1 /* MockNetwork.swift */,
+				BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -635,6 +641,8 @@
 				BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */,
 				BBDE9D442E1FEBDE00FABEC1 /* NavigatorTests.swift in Sources */,
 				BBDE9D522E20265200FABEC1 /* PhotoProviderTests.swift in Sources */,
+				BBBB05362E206A19000C53A7 /* PhotoServiceTests.swift in Sources */,
+				BBBB05382E206A4F000C53A7 /* MockPhotoProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
