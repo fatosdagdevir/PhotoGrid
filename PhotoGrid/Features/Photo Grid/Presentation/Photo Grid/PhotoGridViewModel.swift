@@ -9,13 +9,13 @@ final class PhotoGridViewModel: ObservableObject {
     
     // MARK: - Private Properties
     private let navigator: Navigating
-    private let photoService: PhotoService
+    private let photoService: PhotoServicing
     private let favouritesManager: FavouritesManaging
     private var cancellables = Set<AnyCancellable>()
     
     init(
         navigator: Navigating,
-        photoService: PhotoService,
+        photoService: PhotoServicing,
         favouritesManager: FavouritesManaging
     ) {
         self.navigator = navigator

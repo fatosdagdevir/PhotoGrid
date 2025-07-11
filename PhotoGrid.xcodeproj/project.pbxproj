@@ -10,6 +10,9 @@
 		BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */; };
 		BBBB05362E206A19000C53A7 /* PhotoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05352E206A19000C53A7 /* PhotoServiceTests.swift */; };
 		BBBB05382E206A4F000C53A7 /* MockPhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */; };
+		BBBB053B2E210000000C53A7 /* PhotoGridViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB053A2E210000000C53A7 /* PhotoGridViewModelTests.swift */; };
+		BBBB053D2E2100E6000C53A7 /* MockNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB053C2E2100E6000C53A7 /* MockNavigator.swift */; };
+		BBBB053F2E21010E000C53A7 /* MockPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB053E2E21010E000C53A7 /* MockPhotoService.swift */; };
 		BBDE9CCA2E1C11FF00FABEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBDE9CC62E1C11FF00FABEC1 /* Assets.xcassets */; };
 		BBDE9CCB2E1C11FF00FABEC1 /* PhotoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC72E1C11FF00FABEC1 /* PhotoGridView.swift */; };
 		BBDE9CCC2E1C11FF00FABEC1 /* PhotoGridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDE9CC82E1C11FF00FABEC1 /* PhotoGridApp.swift */; };
@@ -77,6 +80,9 @@
 		BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManagerTests.swift; sourceTree = "<group>"; };
 		BBBB05352E206A19000C53A7 /* PhotoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServiceTests.swift; sourceTree = "<group>"; };
 		BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoProvider.swift; sourceTree = "<group>"; };
+		BBBB053A2E210000000C53A7 /* PhotoGridViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewModelTests.swift; sourceTree = "<group>"; };
+		BBBB053C2E2100E6000C53A7 /* MockNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNavigator.swift; sourceTree = "<group>"; };
+		BBBB053E2E21010E000C53A7 /* MockPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoService.swift; sourceTree = "<group>"; };
 		BBDE9C9C2E1C119F00FABEC1 /* PhotoGrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CA92E1C11A200FABEC1 /* PhotoGridTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDE9CB32E1C11A200FABEC1 /* PhotoGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +166,14 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		BBBB05392E20FF53000C53A7 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				BBBB053A2E210000000C53A7 /* PhotoGridViewModelTests.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		BBDE9C932E1C119F00FABEC1 = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +209,7 @@
 		BBDE9CCE2E1C120200FABEC1 /* PhotoGridTests */ = {
 			isa = PBXGroup;
 			children = (
+				BBBB05392E20FF53000C53A7 /* Features */,
 				BBDE9D452E20239F00FABEC1 /* Core */,
 				BBDE9D4C2E20263C00FABEC1 /* Resources */,
 			);
@@ -449,6 +464,8 @@
 			children = (
 				BBDE9D542E2026BB00FABEC1 /* MockNetwork.swift */,
 				BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */,
+				BBBB053C2E2100E6000C53A7 /* MockNavigator.swift */,
+				BBBB053E2E21010E000C53A7 /* MockPhotoService.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -637,8 +654,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBBB053F2E21010E000C53A7 /* MockPhotoService.swift in Sources */,
 				BBDE9D552E2026BB00FABEC1 /* MockNetwork.swift in Sources */,
 				BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */,
+				BBBB053B2E210000000C53A7 /* PhotoGridViewModelTests.swift in Sources */,
+				BBBB053D2E2100E6000C53A7 /* MockNavigator.swift in Sources */,
 				BBDE9D442E1FEBDE00FABEC1 /* NavigatorTests.swift in Sources */,
 				BBDE9D522E20265200FABEC1 /* PhotoProviderTests.swift in Sources */,
 				BBBB05362E206A19000C53A7 /* PhotoServiceTests.swift in Sources */,

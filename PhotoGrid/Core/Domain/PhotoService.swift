@@ -1,6 +1,11 @@
 import Foundation
 
-final class PhotoService {
+protocol PhotoServicing {
+    func fetchPhotos() async throws -> [Photo]
+    func refreshPhotos() async throws -> [Photo]
+}
+
+final class PhotoService: PhotoServicing {
     enum LoadState {
         case idle
         case loading
