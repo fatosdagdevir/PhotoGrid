@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PhotoListItemView: View {
+struct FavouritePhotoItemView: View {
     let photo: Photo
     let onTap: () -> Void
     
@@ -39,7 +39,7 @@ struct PhotoListItemView: View {
 }
 
 #Preview {
-    PhotoListItemView(
+    FavouritePhotoItemView(
         photo: .mockPhotos[0],
         onTap: {}
     )

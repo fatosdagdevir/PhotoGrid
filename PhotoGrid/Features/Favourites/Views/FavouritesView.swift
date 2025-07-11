@@ -67,7 +67,7 @@ struct FavouritesView: View {
     private func photoList(with photos: [Photo]) -> some View {
         List {
             ForEach(photos) { photo in
-                PhotoListItemView(
+                FavouritePhotoItemView(
                     photo: photo,
                     onTap: {
                         viewModel.presentPhotoDetail(photo: photo)
