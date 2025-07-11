@@ -331,8 +331,8 @@
 		BBDE9CD92E1C122B00FABEC1 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				BB3445852E21274B000CB0D1 /* Photo Detail */,
 				BBDE9CE12E1C12F000FABEC1 /* Photo Grid */,
+				BB3445852E21274B000CB0D1 /* Photo Detail */,
 				BBDE9CE52E1C14AA00FABEC1 /* Favourites */,
 			);
 			path = Features;

@@ -1,6 +1,12 @@
 import SwiftUI
 
 struct PhotoDetailView: View {
+    private enum Layout {
+        enum DismissButton {
+            static let width: CGFloat = 30
+        }
+    }
+    
     @StateObject var viewModel: PhotoDetailViewModel
     
     var body: some View {
@@ -34,7 +40,7 @@ struct PhotoDetailView: View {
             viewModel.dismiss()
         } label: {
             Image(systemName: "xmark")
-                .frame(width: 30)
+                .frame(width: Layout.DismissButton.width)
                 .foregroundColor(.gray)
         }
         .accessibilityLabel("Close photo")

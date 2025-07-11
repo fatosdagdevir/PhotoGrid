@@ -1,11 +1,24 @@
 import SwiftUI
 
 struct FavouritePhotoItemView: View {
+    private enum Layout {
+        enum Image {
+            static let width: CGFloat = 60
+            static let height: CGFloat = 60
+            static let cornerRadius: CGFloat = 8
+        }
+        
+        enum Content {
+            static let hSpacing: CGFloat = 12
+            static let vPadding: CGFloat = 4
+        }
+    }
+    
     let photo: Photo
     let onTap: () -> Void
     
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: Layout.Content.hSpacing) {
             NetworkImageView(
                 url: photo.smallImageURL,
                 content: { image in
@@ -17,9 +30,9 @@ struct FavouritePhotoItemView: View {
                     PlaceholderImageView()
                 }
             )
-            .frame(width: 60, height: 60)
+            .frame(width: Layout.Image.width, height: Layout.Image.height)
             .clipped()
-            .cornerRadius(8)
+            .cornerRadius(Layout.Image.cornerRadius)
             
             Text("By \(photo.author)")
                 .font(.headline)
@@ -27,7 +40,7 @@ struct FavouritePhotoItemView: View {
             
             Spacer()
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, Layout.Content.vPadding)
         .contentShape(Rectangle())
         .onTapGesture {
             onTap()

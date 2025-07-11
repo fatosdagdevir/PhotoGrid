@@ -1,8 +1,12 @@
 import SwiftUI
 
 struct PlaceholderImageView: View {
+    enum Layout {
+        static let cornerRadius: CGFloat = 8
+    }
+    
     var body: some View {
-        RoundedRectangle(cornerRadius: 8)
+        RoundedRectangle(cornerRadius: Layout.cornerRadius)
             .fill(.gray.opacity(0.3))
             .overlay {
                 Image(systemName: "photo")

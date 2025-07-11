@@ -1,26 +1,18 @@
 import SwiftUI
 
 struct FavouritesView: View {
+    private enum Layout {
+        enum EmptyView {
+            static let vSpacing: CGFloat = 16
+            static let iconSize: CGFloat = 30
+        }
+    }
+    
     enum ViewState: Equatable {
         case loading
         case ready(photos: [Photo])
         case empty
         case error(viewModel: ErrorViewModel)
-        
-        static func == (lhs: ViewState, rhs: ViewState) -> Bool {
-            switch (lhs, rhs) {
-            case (.loading, .loading):
-                return true
-            case (.ready(let lhsPhotos), .ready(let rhsPhotos)):
-                return lhsPhotos == rhsPhotos
-            case (.empty, .empty):
-                return true
-            case (.error(let lhsViewModel), .error(let rhsViewModel)):
-                return lhsViewModel.error.localizedDescription == rhsViewModel.error.localizedDescription
-            default:
-                return false
-            }
-        }
     }
     
     @ObservedObject var viewModel: FavouritesViewModel
@@ -46,11 +38,11 @@ struct FavouritesView: View {
     
     @ViewBuilder
     private var emptyView: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: Layout.EmptyView.vSpacing) {
             Image(systemName: "heart.fill")
                 .imageScale(.large)
                 .foregroundStyle(.red)
-                .font(.system(size: 30))
+                .font(.system(size: Layout.EmptyView.iconSize))
             
             Text("Your favourite photos will appear here")
                 .font(.body)

@@ -1,6 +1,20 @@
 import SwiftUI
 
 struct PhotoGridItemView: View {
+    private enum Layout {
+        enum Image {
+            static let minWidth: CGFloat = 100
+            static let minHeight: CGFloat = 100
+            static let cornerRadius: CGFloat = 8
+        }
+        
+        enum FavouriteIndicator {
+            static let iconSize: CGFloat = 15
+            static let shadowRadius: CGFloat = 2
+            static let padding: CGFloat = 8
+        }
+    }
+    
     let photo: Photo
     let isFavourite: Bool
     let onTap: () -> Void
@@ -18,9 +32,9 @@ struct PhotoGridItemView: View {
                     PlaceholderImageView()
                 }
             )
-            .frame(minWidth: 100, minHeight: 100)
+            .frame(minWidth: Layout.Image.minWidth, minHeight: Layout.Image.minHeight)
             .clipped()
-            .cornerRadius(8)
+            .cornerRadius(Layout.Image.cornerRadius)
             .onTapGesture {
                 onTap()
             }
@@ -41,10 +55,10 @@ struct PhotoGridItemView: View {
     private var favouriteIndicator: some View {
         if isFavourite {
             Image(systemName: "heart.fill")
-                .font(.system(size: 15))
+                .font(.system(size: Layout.FavouriteIndicator.iconSize))
                 .foregroundStyle(.red)
-                .shadow(radius: 2)
-                .padding(8)
+                .shadow(radius: Layout.FavouriteIndicator.shadowRadius)
+                .padding(Layout.FavouriteIndicator.padding)
                 .accessibilityHidden(true)
         }
     }

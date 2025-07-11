@@ -8,10 +8,29 @@ struct PhotoGridView: View {
         case error(viewModel: ErrorViewModel)
     }
     
+    private enum Layout {
+        enum Grid {
+            static let vSpacing: CGFloat = 4
+            static let hSpacing: CGFloat = 8
+            static let minimumItemWidth: CGFloat = 100
+        }
+        
+        enum EmptyView {
+            static let vSpacing: CGFloat = 4
+            static let iconSize: CGFloat = 30
+        }
+        
+        enum Content {
+            static let padding: CGFloat = 8
+        }
+    
+        static let hPadding: CGFloat = 16
+    }
+    
     @ObservedObject var viewModel: PhotoGridViewModel
     
     let columns = [
-        GridItem(.adaptive(minimum: 100), spacing: 8)
+        GridItem(.adaptive(minimum: Layout.Grid.minimumItemWidth), spacing: Layout.Grid.hSpacing)
     ]
     
     var body: some View {
@@ -36,7 +55,7 @@ struct PhotoGridView: View {
     @ViewBuilder
     private func photoGrid(with photos: [Photo]) -> some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 8) {
+            LazyVGrid(columns: columns, spacing: Layout.Grid.vSpacing) {
                 ForEach(photos) { photo in
                     PhotoGridItemView(
                         photo: photo,
@@ -47,7 +66,7 @@ struct PhotoGridView: View {
                     )
                 }
             }
-            .padding(8)
+            .padding(Layout.Content.padding)
         }
         .accessibilityLabel("Photo grid with \(photos.count) photos")
         .accessibilityHint("Scroll to browse photos, double tap on a photo to view details")
@@ -55,9 +74,9 @@ struct PhotoGridView: View {
     
     @ViewBuilder
     private var emptyView: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: Layout.EmptyView.vSpacing) {
             Image(systemName: "photo.on.rectangle.angled")
-                .font(.system(size: 30))
+                .font(.system(size: Layout.EmptyView.iconSize))
                 .foregroundStyle(.gray)
             Text("No photos available")
                 .font(.body)
