@@ -1,6 +1,6 @@
 import Foundation
 
-final class MockPhotoProvider: PhotoProviding {
+final class MockPhotoProvider: PhotoProviding, @unchecked Sendable {
     private let state: MockState
     
     enum MockState {

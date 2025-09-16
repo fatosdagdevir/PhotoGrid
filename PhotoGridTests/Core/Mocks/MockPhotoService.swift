@@ -2,7 +2,7 @@ import Foundation
 import Networking
 @testable import PhotoGrid
 
-final class MockPhotoService: PhotoServicing {
+final class MockPhotoService: PhotoServicing, @unchecked Sendable {
     var mockResult: Result<[Photo], Error> = .success([])
     
     func fetchPhotos() async throws -> [Photo] {

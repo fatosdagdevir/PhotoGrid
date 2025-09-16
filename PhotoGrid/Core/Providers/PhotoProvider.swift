@@ -1,11 +1,11 @@
 import Foundation
 import Networking
 
-protocol PhotoProviding {
+protocol PhotoProviding: Sendable {
     func fetchPhotoGrid() async throws -> [Photo]
 }
 
-final class PhotoProvider: PhotoProviding {
+final class PhotoProvider: PhotoProviding, Sendable {
     private let network: Networking
     init(network: Networking = Network()) {
         self.network = network
