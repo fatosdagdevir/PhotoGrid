@@ -7,6 +7,5 @@ struct PhotoGridApp: App {
         WindowGroup {
             AppRootView()
         }
-        .modelContainer(for: FavouritePhoto.self)
     }
 }
