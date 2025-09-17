@@ -3,7 +3,7 @@ import SwiftData
 import Combine
 
 @MainActor
-protocol FavouritesManaging {
+protocol FavouritesManaging: Sendable {
     func addToFavourites(_ photoId: String) async
     func removeFromFavourites(_ photoId: String) async
     func isFavourite(_ photoId: String) async -> Bool
