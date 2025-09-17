@@ -4,24 +4,25 @@ import SwiftData
 struct AppRootView: View {
     // MARK: - Private Properties
     private let dependencyFactory: DependencyFactoryProtocol
+    private let photoService: PhotoServicing
+    private let favouritesManager: FavouritesManaging
     
     // MARK: - Dependencies
     @StateObject private var photoGridNavigator: Navigator
     @StateObject private var favouritesNavigator: Navigator
-    @State private var photoService: PhotoServicing
-    @State private var favouritesManager: FavouritesManaging
-    
+ 
     // MARK: - Initialization
     init(dependencyFactory: DependencyFactoryProtocol = DependencyFactory()) {
         self.dependencyFactory = dependencyFactory
+        self.photoService = dependencyFactory.makePhotoService()
+        self.favouritesManager = dependencyFactory.makeFavouritesManager()
         
-        let photoGridNav = self.dependencyFactory.makeNavigator() as! Navigator
-        let favouritesNav = self.dependencyFactory.makeNavigator() as! Navigator
-        
-        self._photoGridNavigator = StateObject(wrappedValue: photoGridNav)
-        self._favouritesNavigator = StateObject(wrappedValue: favouritesNav)
-        self._photoService = State(wrappedValue: self.dependencyFactory.makePhotoService())
-        self._favouritesManager = State(wrappedValue: self.dependencyFactory.makeFavouritesManager())
+        self._photoGridNavigator = StateObject(
+            wrappedValue: dependencyFactory.makeNavigator()
+        )
+        self._favouritesNavigator = StateObject(
+            wrappedValue: dependencyFactory.makeNavigator()
+        )
     }
     
     var body: some View {

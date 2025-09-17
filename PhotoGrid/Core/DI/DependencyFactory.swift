@@ -7,7 +7,7 @@ protocol DependencyFactoryProtocol {
     func makePhotoService() -> PhotoServicing
     func makePhotoProvider() -> PhotoProviding
     func makeFavouritesManager() -> FavouritesManaging
-    func makeNavigator() -> Navigating
+    func makeNavigator() -> Navigator
 }
 
 // MARK: - Dependency Factory
@@ -39,7 +39,7 @@ final class DependencyFactory: DependencyFactoryProtocol {
         return FavouritesManager(modelContext: modelContext)
     }
     
-    func makeNavigator() -> Navigating {
+    func makeNavigator() -> Navigator {
         return Navigator()
     }
 }

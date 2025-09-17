@@ -7,6 +7,7 @@ final class MockDependencyFactory: DependencyFactoryProtocol {
     let mockPhotoService = MockPhotoService()
     let mockPhotoProvider = MockPhotoProvider()
     let mockFavouritesManager = MockFavouritesManager()
+    let mockNavigator = MockNavigator()
     
     // MARK: - Factory Methods
     func makePhotoService() -> PhotoServicing {
@@ -21,8 +22,13 @@ final class MockDependencyFactory: DependencyFactoryProtocol {
         return mockFavouritesManager
     }
     
-    func makeNavigator() -> Navigating {
-        return MockNavigator()
+    func makeNavigator() -> Navigator {
+        return Navigator()
+    }
+    
+    // MARK: - Testing Helper Methods
+    func makeMockNavigator() -> MockNavigator {
+        return mockNavigator
     }
     
     // MARK: - Configuration Methods for Testing

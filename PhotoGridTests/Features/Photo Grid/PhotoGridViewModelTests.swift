@@ -107,7 +107,7 @@ final class PhotoGridViewModelTests: XCTestCase {
     func test_presentPhotoDetail_callsNavigatorWithCorrectPhoto() {
         // Given
         let photo = Photo.mockPhotos[0]
-        let mockNavigator = mockFactory.makeNavigator() as! MockNavigator
+        let mockNavigator = mockFactory.makeMockNavigator()
         
         // Create a new view model with the same mock navigator for this test
         let testViewModel = PhotoGridViewModel(
