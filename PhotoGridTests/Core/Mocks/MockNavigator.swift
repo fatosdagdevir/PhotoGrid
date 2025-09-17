@@ -29,4 +29,12 @@ final class MockNavigator: Navigating {
         dismissSheetCallCount += 1
         presentedSheet = nil
     }
+    
+    func reset() {
+        presentedSheet = nil
+        navigateCallCount = 0
+        navigateBackCallCount = 0
+        navigateToRootCallCount = 0
+        dismissSheetCallCount = 0
+    }
 }

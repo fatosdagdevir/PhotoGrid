@@ -21,13 +21,14 @@ final class PhotoProviderTests: XCTestCase {
     
     func test_fetchPhotoGrid_success() async throws {
         // Given
-        mockNetwork.mockData = createPhotoGalleryJSON()
+        await mockNetwork.setMockData(createPhotoGalleryJSON())
         
         // When
         let result = try await sut.fetchPhotoGrid()
         
         // Then
-        XCTAssertEqual(mockNetwork.sendCallCount, 1)
+        let callCount = await mockNetwork.sendCallCount
+        XCTAssertEqual(callCount, 1)
         XCTAssertEqual(result.count, 3)
         
         let firstPhoto = try XCTUnwrap(result.first)
@@ -47,19 +48,20 @@ final class PhotoProviderTests: XCTestCase {
     
     func test_fetchPhotoGrid_emptyResponse_returnsEmptyArray() async throws {
         // Given
-        mockNetwork.mockData = createEmptyGalleryJSON()
+        await mockNetwork.setMockData(createEmptyGalleryJSON())
         
         // When
         let result = try await sut.fetchPhotoGrid()
         
         // Then
-        XCTAssertEqual(mockNetwork.sendCallCount, 1)
+        let callCount = await mockNetwork.sendCallCount
+        XCTAssertEqual(callCount, 1)
         XCTAssertTrue(result.isEmpty)
     }
 
     func test_fetchPhotoGrid_networkError() async {
         // Given
-        mockNetwork.mockError = NetworkError.serverError(500)
+        await mockNetwork.setMockError(NetworkError.serverError(500))
          
         // When & Then
         do {
@@ -71,22 +73,25 @@ final class PhotoProviderTests: XCTestCase {
             XCTFail("Unexpected error: \(error)")
         }
         
-        XCTAssertEqual(mockNetwork.sendCallCount, 1)
+        let callCount = await mockNetwork.sendCallCount
+        XCTAssertEqual(callCount, 1)
     }
 
     func test_fetchPhotoGrid_sendsCorrectRequestConfiguration() async throws {
         // Given
-        mockNetwork.mockData = createPhotoGalleryJSON()
+        await mockNetwork.setMockData(createPhotoGalleryJSON())
         
         // When
         _ = try await sut.fetchPhotoGrid()
         
         // Then
-        XCTAssertEqual(mockNetwork.sendCallCount, 1)
-        XCTAssertNotNil(mockNetwork.lastRequest)
+        let callCount = await mockNetwork.sendCallCount
+        let lastRequest = await mockNetwork.lastRequest
+        XCTAssertEqual(callCount, 1)
+        XCTAssertNotNil(lastRequest)
         
         // Verify request properties
-        let request = mockNetwork.lastRequest!
+        let request = try XCTUnwrap(lastRequest)
         XCTAssertEqual(request.method, HTTP.Method.GET)
         XCTAssertEqual(request.endpoint.base, "https://picsum.photos/v2")
         XCTAssertEqual(request.endpoint.path, "/list")
@@ -95,7 +100,7 @@ final class PhotoProviderTests: XCTestCase {
     
     func test_fetchPhotoGrid_multipleCalls_callsNetworkMultipleTimes() async throws {
         // Given
-        mockNetwork.mockData = createEmptyGalleryJSON()
+        await mockNetwork.setMockData(createEmptyGalleryJSON())
         
         // When
         _ = try await sut.fetchPhotoGrid()
@@ -103,7 +108,8 @@ final class PhotoProviderTests: XCTestCase {
         _ = try await sut.fetchPhotoGrid()
         
         // Then
-        XCTAssertEqual(mockNetwork.sendCallCount, 3)
+        let callCount = await mockNetwork.sendCallCount
+        XCTAssertEqual(callCount, 3)
     }
     
     func test_photoURLGeneration_withValidDimensions_generatesCorrectURLs() {

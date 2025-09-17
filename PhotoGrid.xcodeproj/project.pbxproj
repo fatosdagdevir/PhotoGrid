@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9BD403C82E7ACBAA00FB9216 /* DependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD403C72E7ACBAA00FB9216 /* DependencyFactory.swift */; };
+		9BD403CA2E7AD33900FB9216 /* MockDependencyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD403C92E7AD33900FB9216 /* MockDependencyFactory.swift */; };
 		BBBB05342E206407000C53A7 /* FavouritesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */; };
 		BBBB05362E206A19000C53A7 /* PhotoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05352E206A19000C53A7 /* PhotoServiceTests.swift */; };
 		BBBB05382E206A4F000C53A7 /* MockPhotoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */; };
@@ -79,6 +81,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9BD403C72E7ACBAA00FB9216 /* DependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyFactory.swift; sourceTree = "<group>"; };
+		9BD403C92E7AD33900FB9216 /* MockDependencyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencyFactory.swift; sourceTree = "<group>"; };
 		BBBB05322E206407000C53A7 /* FavouritesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesManagerTests.swift; sourceTree = "<group>"; };
 		BBBB05352E206A19000C53A7 /* PhotoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServiceTests.swift; sourceTree = "<group>"; };
 		BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoProvider.swift; sourceTree = "<group>"; };
@@ -161,6 +165,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9BD403BE2E7AB29B00FB9216 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				9BD403C72E7ACBAA00FB9216 /* DependencyFactory.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		BB3445822E212640000CB0D1 /* Photo Grid */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,8 +332,9 @@
 			isa = PBXGroup;
 			children = (
 				BBDE9CF92E1C3CAB00FABEC1 /* Constants */,
-				BBDE9CF62E1C3BD100FABEC1 /* Providers */,
+				9BD403BE2E7AB29B00FB9216 /* DI */,
 				BBDE9CF32E1C3B8C00FABEC1 /* Domain */,
+				BBDE9CF62E1C3BD100FABEC1 /* Providers */,
 				BBDE9CDA2E1C129A00FABEC1 /* Navigation */,
 				BBDE9D3A2E1FD24700FABEC1 /* Utils */,
 			);
@@ -519,6 +532,7 @@
 				BBBB05372E206A4F000C53A7 /* MockPhotoProvider.swift */,
 				BBBB053C2E2100E6000C53A7 /* MockNavigator.swift */,
 				BBBB053E2E21010E000C53A7 /* MockPhotoService.swift */,
+				9BD403C92E7AD33900FB9216 /* MockDependencyFactory.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -676,6 +690,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBDE9D012E1C3E8E00FABEC1 /* Photo.swift in Sources */,
+				9BD403C82E7ACBAA00FB9216 /* DependencyFactory.swift in Sources */,
 				BBDE9CDE2E1C12C300FABEC1 /* AppRootView.swift in Sources */,
 				BBDE9CF82E1C3BFF00FABEC1 /* PhotoProvider.swift in Sources */,
 				BBDE9D172E1D982500FABEC1 /* FavouritesManager.swift in Sources */,
@@ -727,6 +742,7 @@
 				BBDE9D522E20265200FABEC1 /* PhotoProviderTests.swift in Sources */,
 				BBBB05362E206A19000C53A7 /* PhotoServiceTests.swift in Sources */,
 				BBBB05382E206A4F000C53A7 /* MockPhotoProvider.swift in Sources */,
+				9BD403CA2E7AD33900FB9216 /* MockDependencyFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

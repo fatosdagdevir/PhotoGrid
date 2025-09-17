@@ -3,12 +3,12 @@ import SwiftUI
 struct FavouritesCoordinator: View {
     @ObservedObject var navigator: Navigator
     @StateObject private var viewModel: FavouritesViewModel
-    private let photoService: PhotoService
+    private let photoService: PhotoServicing
     private let favouritesManager: FavouritesManaging
     
     init(
         navigator: Navigator,
-        photoService: PhotoService,
+        photoService: PhotoServicing,
         favouritesManager: FavouritesManaging
     ) {
         self.navigator = navigator

@@ -5,30 +5,24 @@ import Combine
 @MainActor
 final class PhotoGridViewModelTests: XCTestCase {
     var sut: PhotoGridViewModel!
-    var mockNavigator: MockNavigator!
-    var mockPhotoService: MockPhotoService!
-    var mockFavouritesManager: MockFavouritesManager!
+    var mockFactory: MockDependencyFactory!
     var cancellables: Set<AnyCancellable>!
     
     override func setUp() async throws {
-        mockNavigator = MockNavigator()
-        mockPhotoService = MockPhotoService()
-        mockFavouritesManager = MockFavouritesManager()
+        mockFactory = MockDependencyFactory()
         cancellables = []
         
         sut = PhotoGridViewModel(
-            navigator: mockNavigator,
-            photoService: mockPhotoService,
-            favouritesManager: mockFavouritesManager
+            navigator: mockFactory.makeNavigator(),
+            photoService: mockFactory.makePhotoService(),
+            favouritesManager: mockFactory.makeFavouritesManager()
         )
     }
     
     override func tearDown() async throws {
         cancellables = nil
         sut = nil
-        mockNavigator = nil
-        mockPhotoService = nil
-        mockFavouritesManager = nil
+        mockFactory = nil
     }
     
     func test_init_setsInitialStateToLoading() {
@@ -39,7 +33,7 @@ final class PhotoGridViewModelTests: XCTestCase {
     func test_fetchPhotoGrid_successWithPhotos_setsReadyState() async {
         // Given
         let mockPhotos = Photo.mockPhotos
-        mockPhotoService.mockResult = .success(mockPhotos)
+        mockFactory.configureMockPhotoService(with: mockPhotos)
         
         // When
         await sut.fetchPhotoGrid()
@@ -50,7 +44,7 @@ final class PhotoGridViewModelTests: XCTestCase {
     
     func test_fetchPhotoGrid_successWithEmptyPhotos_setsEmptyState() async {
         // Given
-        mockPhotoService.mockResult = .success([])
+        mockFactory.configureMockPhotoService(with: [])
         
         // When
         await sut.fetchPhotoGrid()
@@ -62,7 +56,7 @@ final class PhotoGridViewModelTests: XCTestCase {
     func test_fetchPhotoGrid_failure_setsErrorState() async {
         // Given
         let mockError = URLError(.badServerResponse)
-        mockPhotoService.mockResult = .failure(mockError)
+        mockFactory.configureMockPhotoService(with: mockError)
         
         // When
         await sut.fetchPhotoGrid()
@@ -79,8 +73,8 @@ final class PhotoGridViewModelTests: XCTestCase {
     func test_fetchPhotoGrid_loadsFavouriteStatusesForPhotos() async {
         // Given
         let mockPhotos = Photo.mockPhotos
-        mockPhotoService.mockResult = .success(mockPhotos)
-        mockFavouritesManager.setFavourites([mockPhotos[0].id, mockPhotos[2].id])
+        mockFactory.configureMockPhotoService(with: mockPhotos)
+        mockFactory.configureMockFavourites(with: [mockPhotos[0].id, mockPhotos[2].id])
         
         // When
         await sut.fetchPhotoGrid()
@@ -113,9 +107,17 @@ final class PhotoGridViewModelTests: XCTestCase {
     func test_presentPhotoDetail_callsNavigatorWithCorrectPhoto() {
         // Given
         let photo = Photo.mockPhotos[0]
+        let mockNavigator = mockFactory.makeNavigator() as! MockNavigator
+        
+        // Create a new view model with the same mock navigator for this test
+        let testViewModel = PhotoGridViewModel(
+            navigator: mockNavigator,
+            photoService: mockFactory.makePhotoService(),
+            favouritesManager: mockFactory.makeFavouritesManager()
+        )
         
         // When
-        sut.presentPhotoDetail(photo: photo)
+        testViewModel.presentPhotoDetail(photo: photo)
         
         // Then
         XCTAssertEqual(mockNavigator.presentedSheet, .photoDetail(photo: photo))
@@ -143,14 +145,14 @@ final class PhotoGridViewModelTests: XCTestCase {
         defer { cancellable.cancel() }
         
         // When - Add to favourites
-        await mockFavouritesManager.addToFavourites(photoId)
+        await mockFactory.mockFavouritesManager.addToFavourites(photoId)
         await fulfillment(of: [addExpectation], timeout: 1.0)
         
         // Then
         XCTAssertTrue(sut.isFavourite(photoId))
         
         // When - Remove from favourites
-        await mockFavouritesManager.removeFromFavourites(photoId)
+        await mockFactory.mockFavouritesManager.removeFromFavourites(photoId)
         await fulfillment(of: [removeExpectation], timeout: 1.0)
         
         // Then
@@ -160,7 +162,7 @@ final class PhotoGridViewModelTests: XCTestCase {
     func test_handleError_createsErrorViewModelWithRetryAction() async {
         // Given
         let mockError = URLError(.networkConnectionLost)
-        mockPhotoService.mockResult = .failure(mockError)
+        mockFactory.configureMockPhotoService(with: mockError)
         
         // When
         await sut.fetchPhotoGrid()
@@ -170,7 +172,7 @@ final class PhotoGridViewModelTests: XCTestCase {
         case .error(let errorViewModel):
             XCTAssertEqual(errorViewModel.error as? URLError, mockError)
             // Test that retry action works
-            mockPhotoService.mockResult = .success(Photo.mockPhotos)
+            mockFactory.configureMockPhotoService(with: Photo.mockPhotos)
             await errorViewModel.action()
             // Should attempt to refresh
             XCTAssertEqual(sut.viewState, .ready(photos: Photo.mockPhotos))
